@@ -1,19 +1,10 @@
 import { Box } from '@mui/material';
+import Layout from './layout/Layout';
 
 function App() {
   return (
-    <Box
-      sx={{
-        backgroundColor: '#5B735E',
-        w: '100vw',
-        height: '1000px',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: '35px',
-      }}
-    >
-      <Box>WELKOME KURVA, ARE YOU READY ???</Box>
+    <Box>
+      <Layout />
     </Box>
   );
 }
