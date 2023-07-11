@@ -7,19 +7,19 @@ import { Slider } from '../components/Slider/Slider';
 function Layout() {
   return (
     <Box sx={{ backgroundColor: '#131A21' }}>
-        <Heder />
-        <Container sx={{ display: 'flex' }}>
-          <Sidebar />
-          <Box sx={{
+      <Heder />
+      <Container sx={{ display: 'flex' }}>
+        <Sidebar />
+        <Box
+          sx={{
             width: '100%',
-          }}>
-            <Slider />
-            <Slider />
-            
-          </Box>
-
-        </Container>
-      </Box>
+          }}
+        >
+          <Slider />
+          <Slider />
+        </Box>
+      </Container>
+    </Box>
   );
 }
 
