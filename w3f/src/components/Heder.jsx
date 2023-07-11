@@ -11,7 +11,7 @@ function Heder() {
         borderBottom: '1px solid #2D3943',
       }}
     >
-      <Container
+      <Box
         sx={{
           height: '100%',
           display: 'flex',
@@ -54,7 +54,7 @@ function Heder() {
             />
           </Box>
         </Box>
-      </Container>
+      </Box>
     </Box>
   );
 }

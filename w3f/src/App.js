@@ -1,10 +1,10 @@
 import { Box } from '@mui/material';
 import Layout from './layout/Layout';
-import './style/main.css'
 
-function App() {
+// sx={{backgroundColor: '#0C1115'}}
+export function App() {
   return (
-    <Box>
+    <Box sx={{backgroundColor: '#0C1115'}}>
       <Layout />
     </Box>
   );

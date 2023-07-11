@@ -2,7 +2,7 @@ import { Box, Typography } from '@mui/material';
 import React from 'react';
 import RatingCard from '../components/RatingCard';
 
-function Rating() {
+function RatingPage() {
   return (
     <Box sx={{ maxWidth: '967px', margin: '0 auto', pt: '30px', pb: '30px' }}>
       <Box sx={{ mb: '30px' }}>
@@ -49,4 +49,4 @@ function Rating() {
   );
 }
 
-export default Rating;
+export default RatingPage;

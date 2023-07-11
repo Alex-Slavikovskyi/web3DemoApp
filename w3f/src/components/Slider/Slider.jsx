@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../style/slider.css'
+import '../../style/slider.scss'
 import CardFlow from '../../UI/CardFlow';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -8,18 +8,19 @@ import { Box, Typography } from '@mui/material';
 register();
 
 
-export const Slider = () => {
+export const Slider = ({title}) => {
 
   return (
-    <Box sx={{ padding: '36px 10px 0 10px' }}>
+    <Box sx={{ padding: '36px 10px 0 48px', maxWidth: '1200px', }}>
 
       <swiper-container
         slides-per-view="5"
         speed="500"
         loop="true"
         navigation="true"
+        space-between={10}
         autoWidth="true"
-        autoHeight="true"
+        // autoHeight="true"
         grabCursor="true"
         direction='horizontal'
       >
@@ -30,7 +31,7 @@ export const Slider = () => {
             paddingBottom: '4px'
           }}
         >
-          Popular flows
+          {title}
         </Typography>
 
         <swiper-slide><CardFlow /></swiper-slide>
