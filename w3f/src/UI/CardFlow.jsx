@@ -10,9 +10,11 @@ import StarIcon from '@mui/icons-material/Star';
 import React from 'react';
 
 function CardFlow({
-  heder = 'Binance',
+  title = 'Binance',
   subtitle = 'P2P Deal',
   startValue = '4.3',
+  image = 'images/flowCardsContent/video preview1.png',
+  subscription = 'personal Investments • Crypto • Wallets',
 }) {
   return (
     <Card
@@ -24,7 +26,7 @@ function CardFlow({
     >
       <CardMedia
         sx={{ height: '134px', backgroundColor: '#202932' }}
-        image="images/flowCardsContent/Component5.svg"
+        image={image}
         title="green iguana"
       />
       <CardContent>
@@ -38,7 +40,7 @@ function CardFlow({
           }}
           component="div"
         >
-          {heder}
+          {title}
         </Typography>
         <Typography
           gutterBottom
@@ -74,8 +76,7 @@ function CardFlow({
             lineHeight: '0',
           }}
         >
-          Personal Investments • Crypto Wallets • Crypto Exchanges • Servicing &
-          Settings
+          {subscription}
         </Typography>
       </CardContent>
       <CardActions></CardActions>
