@@ -1,4 +1,4 @@
-export const brandCards = [
+export const FlowCards = [
   {
     image: 'images/flowCardsContent/video preview0.png',
     title: 'Binance',
