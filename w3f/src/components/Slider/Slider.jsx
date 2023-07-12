@@ -5,20 +5,21 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { register } from 'swiper/element/bundle';
 import { Box, Typography } from '@mui/material';
+
 register();
 
 
-export const Slider = ({title}) => {
+export const Slider = ({ titleSlider, flowContent }) => {
 
   return (
-    <Box sx={{ padding: '36px 10px 0 48px', maxWidth: '1200px', }}>
+    <Box sx={{ padding: '36px 0 0 0', maxWidth: '1108px', }}>
 
       <swiper-container
         slides-per-view="5"
         speed="500"
         loop="true"
         navigation="true"
-        space-between={10}
+        space-between={24}
         autoWidth="true"
         // autoHeight="true"
         grabCursor="true"
@@ -31,19 +32,25 @@ export const Slider = ({title}) => {
             paddingBottom: '4px'
           }}
         >
-          {title}
+          {titleSlider}
         </Typography>
 
-        <swiper-slide><CardFlow /></swiper-slide>
-        <swiper-slide><CardFlow /></swiper-slide>
-        <swiper-slide><CardFlow /></swiper-slide>
-        <swiper-slide><CardFlow /></swiper-slide>
-        <swiper-slide><CardFlow /></swiper-slide>
-        <swiper-slide><CardFlow /></swiper-slide>
-        <swiper-slide><CardFlow /></swiper-slide>
-        <swiper-slide><CardFlow /></swiper-slide>
-        <swiper-slide><CardFlow /></swiper-slide>
-        <swiper-slide><CardFlow /></swiper-slide>
+        {
+          flowContent.map(card => (
+            <swiper-slide key={card.id}>
+              <CardFlow 
+                title={card.title}
+                subtitle={card.subtitle}
+                startValue={card.startValue}
+                image={card.image}
+                subscription={card.subscription}
+                card={card}
+              />
+            </swiper-slide>
+          ))
+        }
+
+        
       </swiper-container>
     </Box>
 

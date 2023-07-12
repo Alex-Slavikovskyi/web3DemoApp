@@ -10,11 +10,11 @@ import StarIcon from '@mui/icons-material/Star';
 import React from 'react';
 
 function CardFlow({
-  title = 'Binance',
-  subtitle = 'P2P Deal',
-  startValue = '4.3',
-  image = 'images/flowCardsContent/video preview1.png',
-  subscription = 'personal Investments • Crypto • Wallets',
+  title,
+  subtitle,
+  startValue,
+  image,
+  subscription,
 }) {
   return (
     <Card

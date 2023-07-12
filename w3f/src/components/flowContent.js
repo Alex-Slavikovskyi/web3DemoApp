@@ -1,5 +1,6 @@
-export const FlowCards = [
+export const flowContent = [
   {
+    id: 1,
     image: 'images/flowCardsContent/video preview0.png',
     title: 'Binance',
     subtitle: 'P2P Deal',
@@ -7,6 +8,7 @@ export const FlowCards = [
     subscription: 'Crypto Exchanges • P2P',
   },
   {
+    id: 2,
     image: 'images/flowCardsContent/video preview1.png',
     title: 'Binance',
     subtitle: 'Onboarding',
@@ -14,6 +16,7 @@ export const FlowCards = [
     subscription: 'Crypto Exchanges • Login • Verification',
   },
   {
+    id: 3,
     image: 'images/flowCardsContent/video preview2.png',
     title: 'Metamask',
     subtitle: 'Depositing Funds',
@@ -21,6 +24,7 @@ export const FlowCards = [
     subscription: 'Personal Investments • Crypto • Wallets',
   },
   {
+    id: 4,
     image: 'images/flowCardsContent/video preview2.png',
     title: 'Metamask',
     subtitle: 'Depositing Funds',
@@ -28,6 +32,7 @@ export const FlowCards = [
     subscription: 'Crypto Exchanges',
   },
   {
+    id: 5,
     image: 'images/flowCardsContent/video preview3.png',
     title: 'Kraken',
     subtitle: 'Onboarding',
@@ -35,6 +40,7 @@ export const FlowCards = [
     subscription: 'Crypto Exchanges • Login • Verification',
   },
   {
+    id: 6,
     image: 'images/flowCardsContent/video preview4.png',
     title: 'Binance',
     subtitle: 'Buy crypto',
@@ -42,6 +48,7 @@ export const FlowCards = [
     subscription: 'Crypto Exchanges • Buy Crypto',
   },
   {
+    id: 7,
     image: 'images/flowCardsContent/video preview2.png',
     title: 'Metamask',
     subtitle: 'Depositing Funds',
@@ -49,6 +56,7 @@ export const FlowCards = [
     subscription: 'Personal Investments • Crypto • Crypto Exchanges',
   },
   {
+    id: 8,
     image: 'images/flowCardsContent/video preview2.png',
     title: 'Metamask',
     subtitle: 'Depositing Funds',
@@ -56,6 +64,7 @@ export const FlowCards = [
     subscription: 'Personal Investments • Crypto Wallets • Crypto Exchanges',
   },
   {
+    id: 9,
     image: 'images/flowCardsContent/video preview7.png',
     title: 'Coinbase',
     subtitle: 'Onboarding',
