@@ -28,33 +28,58 @@ function Brands() {
         }}
       >
         <img src="images/heder/workflow.svg" />
-        <Typography sx={{ fontWeight: 'bold' }}>FLOWS</Typography>
+        <Typography sx={{ fontWeight: 'bold' }}>BRANDS</Typography>
       </Box>
       <ul style={{ listStyle: 'none', padding: '0px' }}>
-        <li>Account Management</li>
-        <li>Buying crypto currency</li>
-        <li>Cancelling your subscription</li>
-        <li>Commenting</li>
-        <li>Connecting Wallet</li>
-        <li>Deleting account</li>
-        <li>Expenses & Accounting</li>
-        <li>General browsing</li>
-        <li>Help & Contact</li>
-        <li>Listing NFT</li>
-        <li>Login</li>
-        <li>Onboarding</li>
-        <li>Payments & Transfers</li>
-        <li>Portfolio & Performance</li>
-        <li>Promotion Discovery</li>
-        <li>Referrals</li>
-        <li>Rewards</li>
-        <li>Savings Goals & Pots</li>
-        <li>Searching</li>
-        <li>Sending currency</li>
-        <li>Servicing & Settings</li>
-        <li>Statements & Documents</li>
-        <li>Transactions Overview</li>
-        <li>Upgrading account</li>
+        <li>1inch</li>
+        <li>Ambire Wallet</li>
+        <li>AtomicHub</li>
+        <li>Axie Marketplace</li>
+        <li>Binance</li>
+        <li>Bitfinex</li>
+        <li>BitGo</li>
+        <li>BitKeep</li>
+        <li>Bittrex</li>
+        <li>Blur</li>
+        <li>Chronos</li>
+        <li>Coinbase</li>
+        <li>CoinDCX</li>
+        <li>Coinomi</li>
+        <li>CoinPayments</li>
+        <li>Crypto.com</li>
+        <li>CryptoPunks</li>
+        <li>CyberConnect</li>
+        <li>Electrum</li>
+        <li>Enno Wallet</li>
+        <li>Exodus</li>
+        <li>Fxhash</li>
+        <li>Gate.io</li>
+        <li>Gemini</li>
+        <li>HollaEx</li>
+        <li>JPG store</li>
+        <li>Kraken</li>
+        <li>Kucoin</li>
+        <li>LooksRare</li>
+        <li>Luno</li>
+        <li>Magic Eden</li>
+        <li>Magic Square</li>
+        <li>MetaMask</li>
+        <li>Minted</li>
+        <li>Mobox</li>
+        <li>OKX</li>
+        <li>OpenSea</li>
+        <li>Ordinals Wallet</li>
+        <li>Parallax</li>
+        <li>PrimeXBT</li>
+        <li>ThetaDrop</li>
+        <li>Trezor</li>
+        <li>Trust Wallet</li>
+        <li>UniSat</li>
+        <li>Variable</li>
+        <li>WhiteBit</li>
+        <li>Zengo Wallet</li>
+        <li>Zuse Market</li>
+        <li>X2Y2</li>
       </ul>
     </Box>
   );
