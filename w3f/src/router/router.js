@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { App } from '../App.js'
 import { HomePage } from '../pages/HomePage.jsx';
-import { Brand } from '../pages/Brand.jsx';
+import { BrandPage } from '../pages/BrandPage.jsx';
 import RatingPage from '../pages/RatingPage.jsx';
 
 
@@ -19,7 +19,7 @@ export const router = createBrowserRouter([
       },
       {
         path: '/brand',
-        element: <Brand />,
+        element: <BrandPage />,
       },
       {
         path: '/rating',
