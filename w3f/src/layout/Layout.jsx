@@ -8,7 +8,7 @@ import '../style/main.scss';
 
 function Layout() {
   return (
-    <CssBaseline styles={{ body: { backgroundColor: 'red' } }}>
+    <CssBaseline>
       <Box sx={{backgroundColor: '#0C1115', width: '1320px', margin: '0 auto'}}>
         <Heder />
         <Outlet />
