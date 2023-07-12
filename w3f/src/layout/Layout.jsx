@@ -1,25 +1,20 @@
 import { Box, Container } from '@mui/material';
 import React from 'react';
 import Heder from '../components/Heder';
-import Sidebar from '../components/sidebar/Sidebar';
-import { Slider } from '../components/Slider/Slider';
+import { Outlet } from "react-router-dom";
+import CssBaseline from '@mui/material/CssBaseline';
+import '../style/main.scss';
+
 
 function Layout() {
   return (
-    <Box sx={{ backgroundColor: '#131A21' }}>
-      <Heder />
-      <Container sx={{ display: 'flex' }}>
-        <Sidebar />
-        <Box
-          sx={{
-            width: '100%',
-          }}
-        >
-          <Slider />
-          <Slider />
-        </Box>
-      </Container>
-    </Box>
+    <CssBaseline>
+      <Box sx={{backgroundColor: '#0C1115', width: '1320px', margin: '0 auto'}}>
+        <Heder />
+        <Outlet />
+
+      </Box>
+    </CssBaseline>
   );
 }
 

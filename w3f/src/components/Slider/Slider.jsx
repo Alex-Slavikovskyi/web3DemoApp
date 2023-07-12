@@ -1,37 +1,28 @@
 import React from 'react';
-import '../../style/slider.css'
+import '../../style/slider.scss'
 import CardFlow from '../../UI/CardFlow';
-
-
-
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-import 'swiper/css/zoom';
-import 'swiper/less';
-import 'swiper/css/grid';
-
-
 import { register } from 'swiper/element/bundle';
 import { Box, Typography } from '@mui/material';
+
 register();
 
 
-export const Slider = () => {
+export const Slider = ({ titleSlider, flowContent }) => {
 
   return (
-    <Box sx={{ padding: '36px 10px 0 10px' }}>
+    <Box sx={{ padding: '36px 0 0 0', maxWidth: '1108px', }}>
 
       <swiper-container
-        // initialSlide="1"
         slides-per-view="5"
         speed="500"
         loop="true"
         navigation="true"
+        space-between={24}
         autoWidth="true"
-        autoHeight="true"
-        // grabCursor="true"
+        // autoHeight="true"
+        grabCursor="true"
         direction='horizontal'
       >
         <Typography variant="h6" slot="container-start"
@@ -41,30 +32,25 @@ export const Slider = () => {
             paddingBottom: '4px'
           }}
         >
-          Popular flows
+          {titleSlider}
         </Typography>
 
+        {
+          flowContent.map(card => (
+            <swiper-slide key={card.id}>
+              <CardFlow 
+                title={card.title}
+                subtitle={card.subtitle}
+                startValue={card.startValue}
+                image={card.image}
+                subscription={card.subscription}
+                card={card}
+              />
+            </swiper-slide>
+          ))
+        }
 
-        <swiper-slide autoWidth="true"
-          autoHeight="true"><CardFlow /></swiper-slide>
-        <swiper-slide autoWidth="true"
-          autoHeight="true"><CardFlow /></swiper-slide>
-        <swiper-slide autoWidth="true"
-          autoHeight="true"><CardFlow /></swiper-slide>
-        <swiper-slide autoWidth="true"
-          autoHeight="true"><CardFlow /></swiper-slide>
-        <swiper-slide autoWidth="true"
-          autoHeight="true"><CardFlow /></swiper-slide>
-        <swiper-slide autoWidth="true"
-          autoHeight="true"><CardFlow /></swiper-slide>
-        <swiper-slide autoWidth="true"
-          autoHeight="true"><CardFlow /></swiper-slide>
-        <swiper-slide autoWidth="true"
-          autoHeight="true"><CardFlow /></swiper-slide>
-        <swiper-slide autoWidth="true"
-          autoHeight="true"><CardFlow /></swiper-slide>
-        <swiper-slide autoWidth="true"
-          autoHeight="true"><CardFlow /></swiper-slide>
+        
       </swiper-container>
     </Box>
 

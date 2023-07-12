@@ -1,19 +1,14 @@
 swiper-container::part(button-prev) {
   top: 32px;
-  left: 93%;
+  left: 95%;
   width: 14px;
   height: 14px;
   color: #2D3943;
 }
 
-swiper-container::part(button-prev) > svg {
-  font-size: 20px;
-  font-weight: 700;
-}
-
 swiper-container::part(button-next) {
   top: 32px;
-  left: 95%;
+  left: 97%;
   width: 14px;
   height: 14px;
   color: #2D3943;
