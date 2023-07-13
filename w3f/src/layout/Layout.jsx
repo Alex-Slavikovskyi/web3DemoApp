@@ -14,6 +14,7 @@ function Layout() {
       >
         <Heder />
         <Outlet />
+
         <Footer />
       </Box>
     </CssBaseline>
