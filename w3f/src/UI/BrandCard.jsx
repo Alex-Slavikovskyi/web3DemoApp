@@ -3,9 +3,9 @@ import React from 'react';
 import StarIcon from '@mui/icons-material/Star';
 
 function BrandCard({
-  name = 'binance',
-  journeys = '18',
-  startValue = '4.3',
+  name,
+  journeys,
+  startValue,
   image,
 }) {
   return (
@@ -17,14 +17,13 @@ function BrandCard({
         alignItems: 'center',
         alignContent: 'center',
         color: '#fff',
-        mt: '100px',
       }}
     >
       <Box>
         <img
           style={{ height: '48px', width: '48px' }}
-          src="images/brandsContent/Component1.png"
-          alt=""
+          src={image}
+          alt="logo"
         />
       </Box>
       <Typography variant="h6">{name}</Typography>
