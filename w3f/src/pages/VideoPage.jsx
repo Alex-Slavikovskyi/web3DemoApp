@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ReactPlayer from 'react-player';
 import { Box, Typography } from '@mui/material';
 import { ScreenshotVideoContent } from '../components/data/ScreenshotVideoContent';
 import { MIniSliderScreenshots } from '../components/Slider/MIniSliderScreenshots';
 import StarIcon from '@mui/icons-material/Star';
+import { MenuVideo } from '../components/MenuVideo';
+import { previewVideoContent } from '../components/data/previewVideoContent';
+
+
+
 
 
 export const VideoPage = () => {
+  const [currentVideo, setCurrentVideo] = useState(previewVideoContent[0]);
   return (
     <Box>
       <Box>
@@ -20,10 +26,12 @@ export const VideoPage = () => {
           Desktop
         </Typography>
       </Box>
-      <Box sx={{ display: 'flex' }}>
+
+      {/* body VideoPage */}
+      <Box sx={{ display: 'flex', justifyContent: 'space-between', gap: '22px' }}>
         <Box>
           <ReactPlayer
-            url="../video/Onboarding-ready.mov"
+            url={currentVideo.urlVideo}
             controls
             width="856px"
             height="476px"
@@ -86,6 +94,9 @@ export const VideoPage = () => {
             </Typography>
           </Box>
         </Box>
+
+
+        <MenuVideo setCurrentVideo={setCurrentVideo}/>
       </Box>
     </Box>
   )
