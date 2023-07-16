@@ -114,25 +114,8 @@ export const BrandPage = ({
               Servicing & Settings
             </Typography>
           </Box>
-          
-
         </Box>
-
-
-
-
-
-
-
       </Box>
-
-
-
-
-
-
-
-
 
       <Box sx={{
         width: '872px',

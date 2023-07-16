@@ -4,15 +4,16 @@ import CardFlow from '../../UI/CardFlow';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { register } from 'swiper/element/bundle';
-import { Box, Typography } from '@mui/material';
+import { Box, CardMedia, Typography } from '@mui/material';
+import BrandCard from '../../UI/BrandCard';
 
 register();
 
 
-export const Slider = ({ titleSlider, flowContent }) => {
-
+export const Slider = ({ titleSlider, flowContent, brandContent, ScreenshotVideoContent }) => {
+  
   return (
-    <Box sx={{ padding: '36px 0 0 0', maxWidth: '1108px', }}>
+    <Box sx={{ padding: '50px 0 0 0', maxWidth: '1108px', }}>
 
       <swiper-container
         slides-per-view="5"
@@ -22,35 +23,45 @@ export const Slider = ({ titleSlider, flowContent }) => {
         space-between={24}
         autoWidth="true"
         // autoHeight="true"
-        grabCursor="true"
+        // grabCursor="true"
         direction='horizontal'
       >
         <Typography variant="h6" slot="container-start"
           sx={{
             color: '#fff',
             fontWeight: 600,
-            paddingBottom: '4px'
+            paddingBottom: '12px'
           }}
         >
           {titleSlider}
         </Typography>
 
         {
-          flowContent.map(card => (
+          brandContent && brandContent.map(card => (
             <swiper-slide key={card.id}>
-              <CardFlow 
-                title={card.title}
-                subtitle={card.subtitle}
+              <BrandCard
+                name={card.name}
+                journeys={card.journeys}
                 startValue={card.startValue}
                 image={card.image}
-                subscription={card.subscription}
-                card={card}
               />
             </swiper-slide>
           ))
         }
 
-        
+        {
+          flowContent && flowContent.map(card => (
+            <swiper-slide key={card.id}>
+              <CardFlow
+                title={card.title}
+                subtitle={card.subtitle}
+                startValue={card.startValue}
+                image={card.image}
+                subscription={card.subscription}
+              />
+            </swiper-slide>
+          ))
+        }
       </swiper-container>
     </Box>
 
