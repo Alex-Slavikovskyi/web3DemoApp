@@ -13,7 +13,7 @@ register();
 export const Slider = ({ titleSlider, flowContent, brandContent, ScreenshotVideoContent }) => {
   
   return (
-    <Box sx={{ padding: '50px 0 0 0', maxWidth: '1108px', }}>
+    <Box sx={{ padding: '50px 0 0 12px', maxWidth: '1108px', }}>
 
       <swiper-container
         slides-per-view="5"
