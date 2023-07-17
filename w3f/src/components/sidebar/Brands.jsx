@@ -8,12 +8,14 @@ function Brands() {
         padding: '24px',
         borderBottom: '1px solid  #2D3943',
         pb: '0px',
+
         '& ul li': {
           lineHeight: 'none',
+          transition: 'all 0.3s ease',
           padding: '8px',
           '&:hover': {
             cursor: 'pointer',
-            color: '#263039',
+            color: '#55E5C5',
           },
         },
       }}

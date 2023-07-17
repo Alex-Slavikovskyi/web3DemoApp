@@ -1,9 +1,11 @@
-import { Box, CardMedia, Typography, styled } from '@mui/material'
+import { Box, Button, CardMedia, Typography, styled } from '@mui/material'
 import React from 'react'
+import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
+
 
 // style for slider
-// import '../../style/miniSlider.scss'
 import { Navigation, Pagination, Scrollbar, A11y, EffectCards } from 'swiper/modules';
+
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -57,18 +59,34 @@ export const MIniSliderScreenshots = ({ titleSlider, ScreenshotVideoContent }) =
         navigation
         spaceBetween={10}
         grabCursor
-        // onSwiper={(swiper) => console.log(swiper)}
-        // onSlideChange={() => console.log('slide change')}
+      // onSwiper={(swiper) => console.log(swiper)}
+      // onSlideChange={() => console.log('slide change')}
       >
-        <Typography variant="h6" slot="container-start"
-          sx={{
-            color: '#fff',
-            fontWeight: 600,
-            paddingBottom: '12px'
-          }}
-        >
-          {titleSlider}
-        </Typography>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }} slot="container-start">
+          <Typography variant="h6"
+            sx={{
+              color: '#fff',
+              fontWeight: 600,
+              paddingBottom: '12px'
+            }}
+          >
+            {titleSlider}
+          </Typography>
+          <Button startIcon={<FileDownloadOutlinedIcon />}
+            sx={{
+              color: '#FFF',
+              textTransform: 'capitalize',
+              borderRadius: '15px',
+              padding: '3px 12px',
+              // marginBottom: '6px',
+              '&:hover': {
+                backgroundColor: '#3A3F43'
+              }
+            }}>
+            Download all
+          </Button>
+        </Box>
+
         {
           ScreenshotVideoContent && ScreenshotVideoContent.map(card => (
             <SwiperSlide key={card.id}>
