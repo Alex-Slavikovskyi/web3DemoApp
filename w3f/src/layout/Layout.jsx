@@ -10,12 +10,14 @@ function Layout() {
   return (
     <CssBaseline>
       <Box
-        sx={{ backgroundColor: '#0C1115', width: '1320px', margin: '0 auto' }}
+        sx={{ backgroundColor: '#0C1115', width: '1440px', margin: '0 auto', }}
       >
-        <Heder />
-        <Outlet />
+        <Box sx={{ minHeight: '100vh', width: '1320px', margin: '0 auto', }}>
+          <Heder />
+          <Outlet />
 
-        <Footer />
+          <Footer />
+        </Box>
       </Box>
     </CssBaseline>
   );

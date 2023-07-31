@@ -2,6 +2,7 @@ import { Box, CardMedia, Typography } from '@mui/material'
 import React from 'react'
 import CardFlow from '../UI/CardFlow'
 import { flowContent } from '../components/flowContent';
+import { brandPageContent } from '../components/data/brandPageContent';
 import StarIcon from '@mui/icons-material/Star';
 
 
@@ -22,7 +23,7 @@ export const BrandPage = ({
         padding: '46px 22px 24px 22px',
       }}>
         <Box sx={{
-          display: 'flex'
+          display: 'flex',
         }}>
           <CardMedia
             component="img"
@@ -120,12 +121,13 @@ export const BrandPage = ({
       <Box sx={{
         width: '872px',
         display: 'flex',
+        alignContent: 'start',
         flexWrap: 'wrap',
         justifyContent: 'space-between',
         gap: '21px'
       }}>
         {
-          flowContent.map(card => (
+          brandPageContent.map(card => (
             <CardFlow key={card.id}
               title={card.title}
               subtitle={card.subtitle}
