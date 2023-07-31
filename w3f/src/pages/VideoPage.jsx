@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import ReactPlayer from 'react-player';
-import { Box, Typography } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import { ScreenshotVideoContent } from '../components/data/ScreenshotVideoContent';
 import { MIniSliderScreenshots } from '../components/Slider/MIniSliderScreenshots';
 import StarIcon from '@mui/icons-material/Star';
 import { MenuVideo } from '../components/MenuVideo';
 import { previewVideoContent } from '../components/data/previewVideoContent';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -13,8 +15,26 @@ import { previewVideoContent } from '../components/data/previewVideoContent';
 
 export const VideoPage = () => {
   const [currentVideo, setCurrentVideo] = useState(previewVideoContent[0]);
+
+  const navigate = useNavigate();
+  const handleBack = async () => {
+    navigate(-1);
+  };
+
+
   return (
-    <Box>
+    <Box sx={{ position: 'relative' }}>
+        <ArrowBackIcon
+        onClick={handleBack}
+          sx={{
+            cursor: 'pointer',
+            width: '24px',
+            height: '24px',
+            color: '#FFF',
+            position: 'absolute',
+            left: -36,
+          }}
+        />
       <Box>
         <Typography variant='body1' sx={{ color: '#55E5C5', fontWeight: 600, fontSize: '18px', }}>
           Metamask
@@ -96,7 +116,7 @@ export const VideoPage = () => {
         </Box>
 
 
-        <MenuVideo setCurrentVideo={setCurrentVideo}/>
+        <MenuVideo setCurrentVideo={setCurrentVideo} />
       </Box>
     </Box>
   )

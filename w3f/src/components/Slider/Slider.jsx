@@ -18,7 +18,7 @@ export const Slider = ({ titleSlider, flowContent, brandContent, ScreenshotVideo
       <swiper-container
         slides-per-view="5"
         speed="500"
-        loop="true"
+        // loop="true"
         navigation="true"
         space-between={24}
         autoWidth="true"
