@@ -11,15 +11,11 @@ const Search = styled('div')(({ theme }) => ({
   flexDirection: 'row-reverse',
   '& .Mui-focused': {
     border: '1px solid #55E5C5',
-    '& .MuiSvgIcon-root': {
-      color: 'red',
   },
-  },
-  // '& .Mui-focused + & .MuiSvgIcon-root': {
-  //     color: 'red',
-  // },
-
   width: '350px',
+  '&:focus-within .MuiSvgIcon-root': {
+    color: '#55E5C5',
+  },
 }));
 
 const SearchIconWrapper = styled('div')(({ theme }) => ({
@@ -31,10 +27,7 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  // '& .MuiSvgIcon-root': {
-  //   border: '1px solid #55E5C5',
-  //     color: 'red',
-  // },
+
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
@@ -51,7 +44,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export const SearchField = () => {
   return (
     <Box>
-      <Search className="Mui-focused">
+      <Search>
         <StyledInputBase />
         <SearchIconWrapper>
           <SearchIcon />
