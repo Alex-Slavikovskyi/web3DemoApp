@@ -4,14 +4,15 @@ import CardFlow from '../../UI/CardFlow';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { register } from 'swiper/element/bundle';
-import { Box, CardMedia, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import BrandCard from '../../UI/BrandCard';
+import { InsightsCard } from '../../UI/InsightsCard';
 
 register();
 
 
-export const Slider = ({ titleSlider, flowContent, brandContent, ScreenshotVideoContent }) => {
-  
+export const Slider = ({ titleSlider, flowContent, brandContent, insightsContent, ScreenshotVideoContent }) => {
+
   return (
     <Box sx={{ padding: '50px 0 0 12px', maxWidth: '1108px', }}>
 
@@ -59,6 +60,16 @@ export const Slider = ({ titleSlider, flowContent, brandContent, ScreenshotVideo
                 image={card.image}
                 subscription={card.subscription}
               />
+            </swiper-slide>
+          ))
+        }
+        {
+          insightsContent && insightsContent.map(card => (
+            <swiper-slide key={card.id}>
+              <InsightsCard
+                name={card.name}
+                data={card.data}
+                image={card.image} />
             </swiper-slide>
           ))
         }
