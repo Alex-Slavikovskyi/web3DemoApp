@@ -1,4 +1,4 @@
-import { Avatar, Box, Container } from '@mui/material';
+import { Avatar, Box } from '@mui/material';
 import React from 'react';
 import { SearchField } from './InputField';
 
@@ -6,6 +6,10 @@ function Heder() {
   return (
     <Box
       sx={{
+        backgroundColor: '#131a21',
+        zIndex: '10',
+        position: 'sticky',
+        top: '0',
         width: '100%',
         height: '60px',
         borderBottom: '1px solid #2D3943',
@@ -14,6 +18,8 @@ function Heder() {
       <Box
         sx={{
           height: '100%',
+          width: '1320px',
+          margin: '0 auto',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',

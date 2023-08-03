@@ -7,12 +7,13 @@ function Sidebar() {
   return (
     <Box
       sx={{
-        height: '100%',
         borderLeft: '1px solid  #2D3943',
         borderRight: '1px solid  #2D3943',
         color: '#fff',
         width: '196px',
         fontSize: '14px',
+        position: 'fixed',
+        top: '60px',
       }}
     >
       <Flows />

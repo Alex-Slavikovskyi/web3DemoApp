@@ -1,4 +1,4 @@
-import { Box, Container } from '@mui/material';
+import { Box } from '@mui/material';
 import React from 'react';
 import Heder from '../components/Heder';
 import { Outlet, useLocation } from 'react-router-dom';
@@ -11,13 +11,18 @@ function Layout() {
   console.log(location);
   return (
     <CssBaseline>
-      <Box
-        sx={{ backgroundColor: '#0C1115', width: '1440px', margin: '0 auto', }}
-      >
-        <Box sx={{ minHeight: '100vh', width: '1320px', margin: '0 auto', }}>
-          <Heder />
+      <Heder />
+      <Box sx={{ width: '1440px', margin: '0 auto' }}>
+        <Box
+          sx={{
+            minHeight: '100vh',
+            width: '1320px',
+            margin: '0 auto',
+          }}
+        >
           <Outlet />
-          <Footer />
+
+          {/* <Footer /> */}
         </Box>
       </Box>
     </CssBaseline>

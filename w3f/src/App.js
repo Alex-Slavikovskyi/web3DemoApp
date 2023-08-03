@@ -6,7 +6,7 @@ import theme from './style/materialTheme';
 export function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ backgroundColor: '#0C1115' }}>
+      <Box sx={{ backgroundColor: '#131a21' }}>
         <Layout />
       </Box>
     </ThemeProvider>
