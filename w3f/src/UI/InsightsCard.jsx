@@ -1,22 +1,10 @@
-
-
 import {
   Card,
-  CardActions,
   CardContent,
   CardMedia,
   Typography,
-  styled,
 } from '@mui/material';
 import React from 'react';
-
-
-const CardContentStyle = styled(CardContent)(({ theme }) => ({
-  '& .MuiCardContent': {
-    paddingBottom: 0,
-  }
-}))
-
 
 
 
@@ -25,12 +13,15 @@ export const InsightsCard = ({ name, data, image }) => {
     <Card
       sx={{
         width: '198px',
-        // height: '300px',
+        height: '242px',
         backgroundColor: '#202932',
+        '& .MuiCardContent-root': {
+          padding: '8px 16px 36px 16px',
+        } 
       }}
     >
-      <CardMedia image={image} title="green iguana" sx={{height: '134px',}}/>
-      <CardContentStyle>
+      <CardMedia image={image} title="green iguana" sx={{ height: '134px', }} />
+      <CardContent>
         <Typography
           gutterBottom
           variant="h5"
@@ -67,12 +58,7 @@ export const InsightsCard = ({ name, data, image }) => {
         >
           {data}
         </Typography>
-
-      </CardContentStyle>
+      </CardContent>
     </Card>
-
-
-
-    
   )
 }

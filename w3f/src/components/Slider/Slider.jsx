@@ -11,10 +11,10 @@ import { InsightsCard } from '../../UI/InsightsCard';
 register();
 
 
-export const Slider = ({ titleSlider, flowContent, brandContent, insightsContent, ScreenshotVideoContent }) => {
+export const Slider = ({ titleSlider, flowContent, brandContent, insightsContent, editorsChoiceContent }) => {
 
   return (
-    <Box sx={{ padding: '50px 0 0 12px', maxWidth: '1108px', }}>
+    <Box sx={{ padding: '36px 0 0 12px', maxWidth: '1108px', }}>
 
       <swiper-container
         slides-per-view="5"
@@ -70,6 +70,19 @@ export const Slider = ({ titleSlider, flowContent, brandContent, insightsContent
                 name={card.name}
                 data={card.data}
                 image={card.image} />
+            </swiper-slide>
+          ))
+        }
+        {
+          editorsChoiceContent && editorsChoiceContent.map(card => (
+            <swiper-slide key={card.id}>
+              <CardFlow
+                title={card.title}
+                subtitle={card.subtitle}
+                startValue={card.startValue}
+                image={card.image}
+                subscription={card.subscription}
+              />
             </swiper-slide>
           ))
         }

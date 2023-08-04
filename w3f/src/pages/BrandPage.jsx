@@ -1,7 +1,7 @@
 import { Box, CardMedia, Typography } from '@mui/material'
 import React from 'react'
 import CardFlow from '../UI/CardFlow'
-import { brandPageContent } from '../components/data/brandPageContent.js';
+import { brandPageContent } from '../data/brandPageContent.js';
 import StarIcon from '@mui/icons-material/Star';
 
 

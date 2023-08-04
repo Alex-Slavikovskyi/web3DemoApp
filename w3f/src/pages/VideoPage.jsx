@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import ReactPlayer from 'react-player';
-import { Box, Button, Typography } from '@mui/material';
-import { ScreenshotVideoContent } from '../components/data/ScreenshotVideoContent';
+import { Box, Typography } from '@mui/material';
+import { ScreenshotVideoContent } from '../data/ScreenshotVideoContent';
 import { MIniSliderScreenshots } from '../components/Slider/MIniSliderScreenshots';
 import StarIcon from '@mui/icons-material/Star';
 import { MenuVideo } from '../components/MenuVideo';
-import { previewVideoContent } from '../components/data/previewVideoContent';
+import { previewVideoContent } from '../data/previewVideoContent';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useNavigate } from 'react-router-dom';
 

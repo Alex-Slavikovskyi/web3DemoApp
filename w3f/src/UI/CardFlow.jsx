@@ -45,13 +45,16 @@ const HoverStyled = styled(CardMedia)((props) => ({
   },
 }));
 
-function CardFlow({ title, subtitle, startValue, image, subscription }) {
+function CardFlow({ title, subtitle, startValue, image, subscription, h }) {
   return (
     <Card
       sx={{
         width: '198px',
-        height: '300px',
+        height: '270px',
         backgroundColor: '#202932',
+        '& .MuiCardContent-root': {
+          padding: '8px 16px 16px 16px',
+        }
       }}
     >
       <Link to="/video">
@@ -64,6 +67,7 @@ function CardFlow({ title, subtitle, startValue, image, subscription }) {
           sx={{
             color: '#55E5C5',
             fontSize: '13px',
+            lineHeight: '15px',
             fontWeight: '600',
             transition: 'all 0.3s ease',
             '&:hover': {
@@ -81,6 +85,7 @@ function CardFlow({ title, subtitle, startValue, image, subscription }) {
           sx={{
             color: '#fff',
             fontSize: '15px',
+            lineHeight: '19px',
             fontWeight: '500',
             transition: 'all 0.3s ease',
             '&:hover': {
@@ -99,11 +104,12 @@ function CardFlow({ title, subtitle, startValue, image, subscription }) {
             color: '#8f9498',
             fontWeight: '400',
             fontSize: '13px',
+            lineHeight: '15px',
             alignItems: 'center',
           }}
         >
           <StarIcon sx={{ color: '#55E5C5', height: '17px', mb: '3px' }} />
-          <span>{startValue} | Desktop</span>
+          <span>{startValue}</span>
         </Box>
 
         {subscription.split('•').map((item, index, array) => (
@@ -114,7 +120,7 @@ function CardFlow({ title, subtitle, startValue, image, subscription }) {
                 color: '#8f9498',
                 fontWeight: '400',
                 fontSize: '12px',
-                lineHeight: '0',
+                lineHeight: '14px',
                 transition: 'all 0.3s ease',
                 '&:hover': {
                   cursor: 'pointer',

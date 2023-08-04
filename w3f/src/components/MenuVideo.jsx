@@ -1,7 +1,7 @@
 import { Box, Tab, Tabs, styled } from '@mui/material'
 import React, { useState } from 'react'
 import { VideoPreview } from './VideoPreview';
-import { previewVideoContent } from './data/previewVideoContent';
+import { previewVideoContent } from '../data/previewVideoContent';
 
 
 
@@ -21,6 +21,7 @@ const CustomTab = styled(Tab)((props) => ({
     color: '#131A21',
   },
 }));
+
 
 
 export const MenuVideo = ({setCurrentVideo}) => {

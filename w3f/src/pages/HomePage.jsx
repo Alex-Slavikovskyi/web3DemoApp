@@ -2,9 +2,12 @@ import { Box } from '@mui/material';
 import React from 'react';
 import { Slider } from '../components/Slider/Slider';
 import Sidebar from '../components/sidebar/Sidebar';
-import { flowContent } from '../components/data/flowContent.js';
-import { brandContent } from '../components/data/brandContent.js';
-import { insightsContent } from '../components/data/insightsContent';
+import { flowContent } from '../data/flowContent.js';
+import { brandContent } from '../data/brandContent.js';
+import { insightsContent } from '../data/insightsContent';
+import Footer from '../components/Footer';
+import { editorsChoiceContent } from '../data/editorsChoiceContent';
+
 
 export const HomePage = () => {
   return (
@@ -29,6 +32,7 @@ export const HomePage = () => {
           <Slider titleSlider="Popular brands " brandContent={brandContent} />
           <Slider titleSlider="Popular flows " flowContent={flowContent} />
           <Slider titleSlider="Latest Insights " insightsContent={insightsContent} />
+          <Slider titleSlider="Editor’s choice" editorsChoiceContent={editorsChoiceContent} />
         </Box>
         <Box sx={{ pl: '220px' }}>
           <Footer />

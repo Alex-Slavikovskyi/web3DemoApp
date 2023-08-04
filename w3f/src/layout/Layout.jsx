@@ -21,7 +21,6 @@ function Layout() {
           }}
         >
           <Outlet />
-
           {/* <Footer /> */}
         </Box>
       </Box>
