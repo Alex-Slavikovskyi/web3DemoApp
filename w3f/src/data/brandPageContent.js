@@ -1,6 +1,5 @@
 
 export const brandPageContent = [
-
 {
   id: 1,
   image: 'images/flowCardsContent/video preview2.png',
