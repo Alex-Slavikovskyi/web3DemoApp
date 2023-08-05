@@ -15,7 +15,7 @@ function BrandCard({ name, journeys, startValue, image }) {
         color: '#fff',
         transition: 'all 0.3s ease',
         '&:hover': {
-          backgroundColor: '#2c2c2c',
+          backgroundColor: 'rgba(85, 229, 197, 0.05)',
         },
       }}
     >

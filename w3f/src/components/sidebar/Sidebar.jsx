@@ -14,6 +14,7 @@ function Sidebar() {
         fontSize: '14px',
         position: 'fixed',
         top: '60px',
+        height: 'calc(100vh - 60px)',
       }}
     >
       <Flows />
