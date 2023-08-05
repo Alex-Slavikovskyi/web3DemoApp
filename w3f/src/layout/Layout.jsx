@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 
 function Layout() {
   const location = useLocation();
-  console.log(location);
+
   return (
     <CssBaseline>
       <Heder />
@@ -21,7 +21,7 @@ function Layout() {
           }}
         >
           <Outlet />
-          {/* <Footer /> */}
+          {location.pathname !== '/' && <Footer />}
         </Box>
       </Box>
     </CssBaseline>

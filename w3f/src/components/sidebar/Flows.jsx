@@ -18,56 +18,52 @@ function Flows() {
         sx={{
           paddingLeft: '24px',
           paddingRight: '24px',
+
           borderBottom: '1px solid  #2D3943',
           overflow: 'scroll',
-          height: '471px',
+          height: 'calc(50vh - 60px)',
 
           scrollbarWidth: 'none',
           '&::-webkit-scrollbar': {
             display: 'none',
           },
+          '& ul li': {
+            transition: 'all 0.3s ease',
+            lineHeight: 'none',
+            padding: '8px',
+            '&:hover': {
+              cursor: 'pointer',
+              color: '#55E5C5',
+            },
+          },
         }}
       >
-        <Box
-          sx={{
-            '& ul li': {
-              transition: 'all 0.3s ease',
-              lineHeight: 'none',
-              padding: '8px',
-              '&:hover': {
-                cursor: 'pointer',
-                color: '#55E5C5',
-              },
-            },
-          }}
-        >
-          <ul style={{ listStyle: 'none', padding: '0px' }}>
-            <li>Account Management</li>
-            <li>Buying crypto currency</li>
-            <li>Cancelling your subscription</li>
-            <li>Commenting</li>
-            <li>Connecting Wallet</li>
-            <li>Deleting account</li>
-            <li>Expenses & Accounting</li>
-            <li>General browsing</li>
-            <li>Help & Contact</li>
-            <li>Listing NFT</li>
-            <li>Login</li>
-            <li>Onboarding</li>
-            <li>Payments & Transfers</li>
-            <li>Portfolio & Performance</li>
-            <li>Promotion Discovery</li>
-            <li>Referrals</li>
-            <li>Rewards</li>
-            <li>Savings Goals & Pots</li>
-            <li>Searching</li>
-            <li>Sending currency</li>
-            <li>Servicing & Settings</li>
-            <li>Statements & Documents</li>
-            <li>Transactions Overview</li>
-            <li>Upgrading account</li>
-          </ul>
-        </Box>
+        <ul style={{ listStyle: 'none', padding: '0px' }}>
+          <li>Account Management</li>
+          <li>Buying crypto currency</li>
+          <li>Cancelling your subscription</li>
+          <li>Commenting</li>
+          <li>Connecting Wallet</li>
+          <li>Deleting account</li>
+          <li>Expenses & Accounting</li>
+          <li>General browsing</li>
+          <li>Help & Contact</li>
+          <li>Listing NFT</li>
+          <li>Login</li>
+          <li>Onboarding</li>
+          <li>Payments & Transfers</li>
+          <li>Portfolio & Performance</li>
+          <li>Promotion Discovery</li>
+          <li>Referrals</li>
+          <li>Rewards</li>
+          <li>Savings Goals & Pots</li>
+          <li>Searching</li>
+          <li>Sending currency</li>
+          <li>Servicing & Settings</li>
+          <li>Statements & Documents</li>
+          <li>Transactions Overview</li>
+          <li>Upgrading account</li>
+        </ul>
       </Box>
     </Box>
   );
