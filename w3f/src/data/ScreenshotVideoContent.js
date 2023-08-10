@@ -35,4 +35,45 @@ export const ScreenshotVideoContent = [
     id: 9,
     image: '../images/screenshotsVideo/Screenshot8.png',
   },
+  {
+    id: 10,
+    image: '../images/screenshotsVideo/Screenshot9.png',
+  },
+  {
+    id: 11,
+    image: '../images/screenshotsVideo/Screenshot10.png',
+  },
+  {
+    id: 12,
+    image: '../images/screenshotsVideo/Screenshot11.png',
+  },
+  {
+    id: 13,
+    image: '../images/screenshotsVideo/Screenshot12.png',
+  },
+  {
+    id: 14,
+    image: '../images/screenshotsVideo/Screenshot13.png',
+  },
+  {
+    id: 15,
+    image: '../images/screenshotsVideo/Screenshot14.png',
+  },
+  {
+    id: 16,
+    image: '../images/screenshotsVideo/Screenshot15.png',
+  },
+  {
+    id: 17,
+    image: '../images/screenshotsVideo/Screenshot16.png',
+  },
+  {
+    id: 18,
+    image: '../images/screenshotsVideo/Screenshot17.png',
+  },
+  {
+    id: 19,
+    image: '../images/screenshotsVideo/Screenshot18.png',
+  },
+
 ]

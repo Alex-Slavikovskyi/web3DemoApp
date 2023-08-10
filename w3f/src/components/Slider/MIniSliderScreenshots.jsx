@@ -1,6 +1,7 @@
 import { Box, Button, CardMedia, Typography, styled } from '@mui/material'
 import React from 'react'
 import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
+import { saveAs } from 'file-saver';
 
 
 // style for slider
@@ -17,14 +18,39 @@ import { register } from 'swiper/element/bundle';
 register();
 // ----end----
 
+const ButtonStyled = styled(Button)((props) => ({
+  color: '#FFF',
+  textTransform: 'capitalize',
+  borderRadius: '15px',
+  padding: '3px 12px',
+  '&:hover': {
+    cursor: 'pointer',
+    textDecoration: 'underline',
+    backgroundColor: 'inherit',
+  }
+}))
 
 const SwiperStyled = styled(Swiper)((props) => ({
-
+  zIndex: 9999,
   "& .swiper-button-prev": {
-    top: 84,
-    left: -6,
+    top: 64,
+    left: 40,
+    '&::before': {
+      content: `''`,
+      top: 0,
+      right: 0,
+      zIndex: 10,
+      position: 'absolute',
+      width: '74px',
+      height: '88px',
+      background: 'linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0))',
+    },
     '&::after': {
       content: `''`,
+      zIndex: 11,
+      top: 30,
+      right: 40,
+      position: 'absolute',
       backgroundImage: `url(../svg/VectorPrev.svg)`,
       backgroundSize: '24px 24px',
       backgroundRepeat: 'no-repeat',
@@ -32,11 +58,26 @@ const SwiperStyled = styled(Swiper)((props) => ({
       height: '24px',
     }
   },
+
   "& .swiper-button-next": {
-    top: 84,
+    top: 64,
     right: -6,
+    '&::before': {
+      content: `''`,
+      top: 0,
+      right: 0,
+      zIndex: 10,
+      position: 'absolute',
+      width: '74px',
+      height: '88px',
+      background: 'linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7))',
+    },
     '&::after': {
       content: `''`,
+      zIndex: 11,
+      top: 30,
+      right: 6,
+      position: 'absolute',
       backgroundImage: `url(../svg/VectorNext.svg)`,
       backgroundSize: '24px 24px',
       backgroundRepeat: 'no-repeat',
@@ -48,6 +89,23 @@ const SwiperStyled = styled(Swiper)((props) => ({
 
 
 export const MIniSliderScreenshots = ({ titleSlider, ScreenshotVideoContent }) => {
+
+
+  const handleDownloadClick = () => {
+    // Путь к вашему архиву с файлами
+    const zipFilePath = '../save/binance-onboarding.zip';
+    
+    // Загрузка архива с использованием библиотеки FileSaver.js
+    fetch(zipFilePath)
+      .then(response => response.blob())
+      .then(blob => {
+        saveAs(blob, 'binance-onboarding.zip');
+      })
+      .catch(error => {
+        console.error('Ошибка при загрузке архива:', error);
+      });
+  };
+
   return (
     <Box>
       <SwiperStyled
@@ -70,21 +128,13 @@ export const MIniSliderScreenshots = ({ titleSlider, ScreenshotVideoContent }) =
               paddingBottom: '12px'
             }}
           >
-            {titleSlider}
+            {ScreenshotVideoContent && `${titleSlider} (${ScreenshotVideoContent.length})`}
           </Typography>
-          <Button startIcon={<FileDownloadOutlinedIcon />}
-            sx={{
-              color: '#FFF',
-              textTransform: 'capitalize',
-              borderRadius: '15px',
-              padding: '3px 12px',
-              // marginBottom: '6px',
-              '&:hover': {
-                backgroundColor: '#3A3F43'
-              }
-            }}>
+          <ButtonStyled startIcon={<FileDownloadOutlinedIcon />}
+          onClick={handleDownloadClick}
+          >
             Download all
-          </Button>
+          </ButtonStyled>
         </Box>
 
         {
@@ -104,6 +154,5 @@ export const MIniSliderScreenshots = ({ titleSlider, ScreenshotVideoContent }) =
         }
       </SwiperStyled>
     </Box>
-
   )
 }
