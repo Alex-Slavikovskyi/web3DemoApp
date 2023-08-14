@@ -4,7 +4,7 @@ import { HomePage } from '../pages/HomePage.jsx';
 import { BrandPage } from '../pages/BrandPage.jsx';
 import RatingPage from '../pages/RatingPage.jsx';
 import { VideoPage } from '../pages/VideoPage.jsx';
-
+import { CateforyPage } from '../pages/CateforyPage.jsx';
 
 
 export const router = createBrowserRouter([
@@ -29,6 +29,10 @@ export const router = createBrowserRouter([
       {
         path: '/video',
         element: <VideoPage />
+      },
+      {
+        path: '/catefory',
+        element: <CateforyPage/>,
       },
     ],
   },

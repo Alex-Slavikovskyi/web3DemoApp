@@ -7,6 +7,8 @@ import StarIcon from '@mui/icons-material/Star';
 import { MenuVideo } from '../components/MenuVideo';
 import { previewVideoContent } from '../data/previewVideoContent';
 import { DescriptionVideo } from '../components/DescriptionVideo';
+import { previewSuggestedJourneys } from '../data/previewVideoContent';
+import { previewMoreBrand } from '../data/previewVideoContent';
 
 export const VideoPage = () => {
   const [currentVideo, setCurrentVideo] = useState(previewVideoContent[0]);
@@ -29,29 +31,40 @@ export const VideoPage = () => {
       </Box>
 
       {/* body VideoPage */}
-      <Box
+      {/* <Box
         sx={{ display: 'flex', justifyContent: 'space-between', gap: '22px', paddingTop: '28px' }}
-      >
-        <Box>
-          <ReactPlayer width="856px" height="476px" controls
-            url={currentVideo.urlVideo}
-            style={{ backgroundColor: 'rgb(11,13,14)' }}
-          />
-          <Box
-            sx={{ marginTop: '24px', padding: '20px 24px 48px 24px', backgroundColor: '#202932', maxWidth: '856px', }}
-          >
-            <MIniSliderScreenshots
-              titleSlider="Screenshots "
-              ScreenshotVideoContent={ScreenshotVideoContent}
+      > */}
+      <Box>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', gap: '22px', padding: '28px 0 24px 0', }}>
+          <Box sx={{ height: '700px'}}>
+            <ReactPlayer width="856px" height="476px" controls
+              url={currentVideo.urlVideo}
+              style={{ backgroundColor: 'rgb(11,13,14)' }}
             />
+            <Box
+              sx={{ marginTop: '24px', padding: '20px 24px 0 24px', backgroundColor: '#202932', maxWidth: '856px', }}
+            >
+              <MIniSliderScreenshots
+                titleSlider="Screenshots "
+                ScreenshotVideoContent={ScreenshotVideoContent}
+              />
+            </Box>
           </Box>
 
-          <DescriptionVideo />
+          {/* right section Video menu */}
+          <MenuVideo 
+          setCurrentVideo={setCurrentVideo} 
+          previewSuggestedJourneys={previewSuggestedJourneys}
+          previewMoreBrand={previewMoreBrand}
+          />
         </Box>
 
-        {/* right section Video menu */}
-        <MenuVideo setCurrentVideo={setCurrentVideo} />
+        <DescriptionVideo />
       </Box>
+
+
+
+      {/* </Box> */}
     </Box>
   );
 };

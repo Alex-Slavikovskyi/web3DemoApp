@@ -30,6 +30,7 @@ const ButtonStyled = styled(Button)((props) => ({
   }
 }))
 
+
 const SwiperStyled = styled(Swiper)((props) => ({
   zIndex: 9999,
   "& .swiper-button-prev": {
@@ -107,12 +108,13 @@ export const MIniSliderScreenshots = ({ titleSlider, ScreenshotVideoContent }) =
   };
 
   return (
-    <Box>
+    <Box sx={{height: '180px'}}>
       <SwiperStyled
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y, EffectCards]}
         // loop
         slidesPerView={5.5}
+        slides-per-roup={1}
         speed={500}
         navigation
         spaceBetween={10}

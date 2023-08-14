@@ -1,31 +1,75 @@
 import React from 'react';
-import '../../style/slider.scss'
 import CardFlow from '../../UI/CardFlow';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import { register } from 'swiper/element/bundle';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, styled } from '@mui/material';
 import BrandCard from '../../UI/BrandCard';
 import { InsightsCard } from '../../UI/InsightsCard';
 
+// style for slider
+import { Navigation, Pagination, Scrollbar, A11y, EffectCards } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import 'swiper/css/effect-cards';
+import { register } from 'swiper/element/bundle';
 register();
+
+
+const SwiperStyled = styled(Swiper)((props) => {
+  return ({
+    "& .swiper-button-prev": {
+      top: 30,
+      left: '94.5%',
+      '&::after': {
+        content: `''`,
+        width: '14px',
+        height: '14px',
+        zIndex: 11,
+        position: 'absolute',
+        backgroundImage: `url(../svg/VectorSliderPrevShadow.svg)`,
+        fill: 'red',
+        color: 'red',
+        backgroundSize: '14px 14px',
+        backgroundRepeat: 'no-repeat',
+        '& svg': {
+          color: 'red',
+          fill: 'blue',
+        }
+      }
+    },
+
+    "& .swiper-button-next": {
+      top: 30,
+      
+      '&::after': {
+        content: `''`,
+        zIndex: 11,
+        position: 'absolute',
+        backgroundImage: `url(../svg/VectorSliderNextShadow.svg)`,
+        backgroundSize: '14px 14px',
+        backgroundRepeat: 'no-repeat',
+        width: '14px',
+        height: '14px',
+      }
+    }
+  });
+})
 
 
 export const Slider = ({ titleSlider, flowContent, brandContent, insightsContent, editorsChoiceContent }) => {
 
   return (
-    <Box sx={{ padding: '36px 0 0 12px', maxWidth: '1108px', }}>
-
-      <swiper-container
-        slides-per-view="5"
-        speed="500"
-        // loop="true"
-        navigation="true"
-        space-between={24}
-        autoWidth="true"
-        // autoHeight="true"
-        // grabCursor="true"
-        direction='horizontal'
+    <Box sx={{ padding: '36px 0 0 12px', maxWidth: '1108px' }}>
+      <SwiperStyled
+        modules={[Navigation, Pagination, Scrollbar, A11y, EffectCards]}
+        // loop
+        slidesPerView={5}
+        slides-per-roup={1}
+        speed={500}
+        navigation
+        spaceBetween={24}
+        grabCursor
       >
         <Typography variant="h6" slot="container-start"
           sx={{
@@ -39,20 +83,20 @@ export const Slider = ({ titleSlider, flowContent, brandContent, insightsContent
 
         {
           brandContent && brandContent.map(card => (
-            <swiper-slide key={card.id}>
+            <SwiperSlide key={card.id}>
               <BrandCard
                 name={card.name}
                 journeys={card.journeys}
                 startValue={card.startValue}
                 image={card.image}
               />
-            </swiper-slide>
+            </SwiperSlide>
           ))
         }
 
         {
           flowContent && flowContent.map(card => (
-            <swiper-slide key={card.id}>
+            <SwiperSlide key={card.id}>
               <CardFlow
                 title={card.title}
                 subtitle={card.subtitle}
@@ -60,22 +104,22 @@ export const Slider = ({ titleSlider, flowContent, brandContent, insightsContent
                 image={card.image}
                 subscription={card.subscription}
               />
-            </swiper-slide>
+            </SwiperSlide>
           ))
         }
         {
           insightsContent && insightsContent.map(card => (
-            <swiper-slide key={card.id}>
+            <SwiperSlide key={card.id}>
               <InsightsCard
                 name={card.name}
                 data={card.data}
                 image={card.image} />
-            </swiper-slide>
+            </SwiperSlide>
           ))
         }
         {
           editorsChoiceContent && editorsChoiceContent.map(card => (
-            <swiper-slide key={card.id}>
+            <SwiperSlide key={card.id}>
               <CardFlow
                 title={card.title}
                 subtitle={card.subtitle}
@@ -83,10 +127,10 @@ export const Slider = ({ titleSlider, flowContent, brandContent, insightsContent
                 image={card.image}
                 subscription={card.subscription}
               />
-            </swiper-slide>
+            </SwiperSlide>
           ))
         }
-      </swiper-container>
+      </SwiperStyled>
     </Box>
 
   )

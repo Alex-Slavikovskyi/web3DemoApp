@@ -39,20 +39,22 @@ const HoverStyled = styled(CardMedia)((props) => ({
 export const VideoPreview = ({ preview, setCurrentVideo }) => (
   <Box
     sx={{
-      padding: '2px',
-      marginTop: '16px',
+      padding: '0 16px 16px',
       display: 'flex',
       gap: '10px',
+
     }}
-    onClick={() => setCurrentVideo(preview)}
+
   >
     <HoverStyled
       // component="img"
       // alt="prev"
       image={preview.prevImg}
+      onClick={() => setCurrentVideo(preview)}
     />
 
     <Box
+      onClick={() => setCurrentVideo(preview)}
       sx={{
         paddingTop: '6px',
         display: 'flex',
@@ -95,11 +97,13 @@ export const VideoPreview = ({ preview, setCurrentVideo }) => (
           justifyContent: 'start',
           color: '#8f9498',
           fontSize: '13px',
+          fontWeight: 400,
+          lineHeight: '16px',
           alignItems: 'center',
         }}
       >
         <StarIcon
-          sx={{ color: '#55E5C5', height: '17px', width: '17px', mb: '3px' }}
+          sx={{ color: '#55E5C5', height: '16px', width: '16px', paddingRight: '2px' }}
         />
         <span>{preview.startValue} | Desktop</span>
       </Box>
