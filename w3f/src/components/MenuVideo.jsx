@@ -1,12 +1,13 @@
 import { Box, Tab, Tabs, styled } from '@mui/material'
 import React, { useState } from 'react'
 import { VideoPreview } from './VideoPreview';
-import { previewVideoContent } from '../data/previewVideoContent';
+// import { previewVideoContent } from '../data/previewVideoContent';
 
 
 
 const CustomTab = styled(Tab)((props) => ({
   fontWeight: '600',
+  height: '36px',
   fontSize: '14px',
   width: '50%',
   textTransform: 'capitalize',
@@ -24,7 +25,7 @@ const CustomTab = styled(Tab)((props) => ({
 
 
 
-export const MenuVideo = ({setCurrentVideo}) => {
+export const MenuVideo = ({ setCurrentVideo, previewSuggestedJourneys, previewMoreBrand }) => {
   const [tabIndex, setTabIndex] = useState(0);
 
   const handleTabChange = (event, newTabIndex) => {
@@ -35,24 +36,29 @@ export const MenuVideo = ({setCurrentVideo}) => {
     <Box sx={{
       color: '#FFF',
       backgroundColor: "#202932",
+      // background: 'rgba(64, 64, 64, 1)',
       width: '100%',
-      padding: '18px 12px'
+      height: '700px',
     }}>
 
 
-      <Tabs value={tabIndex} onChange={handleTabChange} indicatorColor='none' >
+      <Tabs value={tabIndex} onChange={handleTabChange} indicatorColor='none' sx={{ padding: '24px 16px 16px 16px' }}>
         <CustomTab label="Suggested journeys" key='Suggested' />
         <CustomTab label="More from brand" key='More' />
       </Tabs>
 
-{
-  previewVideoContent && previewVideoContent.map(preview => (
-    <VideoPreview preview={preview} setCurrentVideo={setCurrentVideo} key={preview.id} />
-  ))
-}
-      
-
-
+      <Box sx={{ overflow: 'auto', height: '600px', }}>
+        {
+          tabIndex === 0 && previewSuggestedJourneys && previewSuggestedJourneys.map(preview => (
+            <VideoPreview preview={preview} setCurrentVideo={setCurrentVideo} key={preview.id} />
+          ))
+        }
+        {
+          tabIndex === 1 && previewMoreBrand && previewMoreBrand.map(preview => (
+            <VideoPreview preview={preview} setCurrentVideo={setCurrentVideo} key={preview.id} />
+          ))
+        }
+      </Box>
     </Box>
   )
 }

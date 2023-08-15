@@ -1,0 +1,23 @@
+export const filterCheckboxContent = [
+  'Account Management',
+  'Buying crypto currency',
+  'Cancelling your subscription',
+  'Commenting',
+  'Connecting Wallet',
+  'Deleting account',
+  'Expenses & Accounting',
+  'General browsing',
+  'Help & Contact',
+  'Listing NFT',
+  'Login',
+  'Onboarding',
+  'Payments & Transfers',
+  'Portfolio & Performance',
+  'Promotion Discovery',
+  'Referrals',
+  'Rewards',
+  'Searching',
+  'Sending currency',
+  'Servicing & Settings',
+  'Statements & Documents'
+]
