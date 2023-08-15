@@ -4,7 +4,8 @@ export const editorsChoiceContent = [
     image: 'images/editorsChoiceContent/video_preview1.png',
     title: 'Binance',
     subtitle: 'P2P Deal',
-    startValue: '4.6 | Desktop',
+    startValue: '4.6',
+    device: 'Desktop',
     subscription: 'Crypto Exchanges • P2P',
   },
   {
@@ -12,7 +13,8 @@ export const editorsChoiceContent = [
     image: 'images/editorsChoiceContent/video_preview2.png',
     title: 'Binance',
     subtitle: 'Onboarding',
-    startValue: '4.8 | Desktop',
+    startValue: '4.8',
+    device: 'Desktop',
     subscription: 'Crypto Exchanges',
   },
   {
@@ -20,7 +22,8 @@ export const editorsChoiceContent = [
     image: 'images/editorsChoiceContent/video_preview3.png',
     title: 'Binance',
     subtitle: 'Buy crypto',
-    startValue: '4.7 | Desktop',
+    startValue: '4.7',
+    device: 'Desktop',
     subscription: 'Crypto Exchanges • Crypto Wallet',
   },
   {
@@ -28,7 +31,8 @@ export const editorsChoiceContent = [
     image: 'images/editorsChoiceContent/video_preview4.png',
     title: 'Kraken',
     subtitle: 'Buy crypto',
-    startValue: '4.7 | Desktop',
+    startValue: '4.7',
+    device: 'Desktop',
     subscription: 'Crypto Exchanges • Crypto Wallet',
   },
   {
@@ -36,7 +40,8 @@ export const editorsChoiceContent = [
     image: 'images/editorsChoiceContent/video_preview5.png',
     title: 'Coinbase',
     subtitle: 'Onboarding',
-    startValue: '4.7 | Desktop',
+    startValue: '4.7',
+    device: 'Desktop',
     subscription: 'Crypto Exchanges',
   },
   {
@@ -44,7 +49,8 @@ export const editorsChoiceContent = [
     image: 'images/editorsChoiceContent/video_preview6.png',
     title: '1inch',
     subtitle: 'Connect wallet',
-    startValue: '4.6 | Desktop',
+    startValue: '4.6',
+    device: 'Desktop',
     subscription: 'Crypto Exchanges • Connecting Third Parties',
   },
   {
@@ -52,7 +58,8 @@ export const editorsChoiceContent = [
     image: 'images/editorsChoiceContent/video_preview7.png',
     title: 'Crypto.com',
     subtitle: 'Onboarding',
-    startValue: `4.7 | Mobile`,
+    startValue: `4.7`,
+    device: 'Mobile',
     subscription: 'Crypto Exchanges',
   },
   {
@@ -60,7 +67,8 @@ export const editorsChoiceContent = [
     image: 'images/editorsChoiceContent/video_preview8.png',
     title: 'Crypto.com',
     subtitle: 'Buy crypto',
-    startValue: '4.7 | Desktop',
+    startValue: '4.7',
+    device: 'Desktop',
     subscription: 'Crypto Exchanges • Crypto Wallet',
   },
   {
@@ -68,7 +76,8 @@ export const editorsChoiceContent = [
     image: 'images/editorsChoiceContent/video_preview9.png',
     title: '1inch',
     subtitle: 'Exchange crypto',
-    startValue: '4.7 | Desktop',
+    startValue: '4.7',
+    device: 'Desktop',
     subscription: 'Crypto Exchanges • Crypto Wallet',
   },
 ];

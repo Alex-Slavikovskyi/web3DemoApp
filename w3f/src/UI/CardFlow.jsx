@@ -45,7 +45,7 @@ const HoverStyled = styled(CardMedia)((props) => ({
   },
 }));
 
-function CardFlow({ title, subtitle, startValue, image, subscription, h }) {
+function CardFlow({ title, subtitle, startValue, device, image, subscription, h }) {
   return (
     <Card
       sx={{
@@ -109,7 +109,7 @@ function CardFlow({ title, subtitle, startValue, image, subscription, h }) {
           }}
         >
           <StarIcon sx={{ color: '#55E5C5', height: '17px', mb: '3px' }} />
-          <span>{startValue}</span>
+          <span>{startValue} | {device}</span>
         </Box>
 
         {subscription.split('•').map((item, index, array) => (

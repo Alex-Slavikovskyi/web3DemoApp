@@ -6,6 +6,7 @@ export const brandPageContent = [
     title: 'Binance',
     subtitle: 'Buy crypto',
     startValue: '4.7',
+    device: 'Desktop',
     subscription: 'Crypto Exchange • Crypto Wallet',
   },
   {
@@ -14,6 +15,7 @@ export const brandPageContent = [
     title: 'Binance',
     subtitle: 'Onboarding',
     startValue: '4.8',
+    device: 'Desktop',
     subscription: 'Crypto Exchange',
   },
   {
@@ -22,6 +24,7 @@ export const brandPageContent = [
     title: 'Binance',
     subtitle: 'P2P Deal',
     startValue: '4.6',
+    device: 'Desktop',
     subscription: 'Crypto Exchange • P2P',
   },
   {
@@ -30,6 +33,7 @@ export const brandPageContent = [
     title: 'Binance',
     subtitle: 'Market overview',
     startValue: '4.1',
+    device: 'Desktop',
     subscription: 'Crypto Exchange • Trading',
   },
   {
@@ -38,6 +42,7 @@ export const brandPageContent = [
     title: 'Binance',
     subtitle: 'Trading bots overview',
     startValue: '4.7',
+    device: 'Desktop',
     subscription: 'Crypto Exchange • Crypto Wallet',
   },
   {
@@ -46,6 +51,7 @@ export const brandPageContent = [
     title: 'Binance',
     subtitle: 'Future markets',
     startValue: '3.6',
+    device: 'Mobile',
     subscription: 'Crypto Exchange',
   },
   {
@@ -54,6 +60,7 @@ export const brandPageContent = [
     title: 'Binance',
     subtitle: 'NFT marketplace overview',
     startValue: '4.1',
+    device: 'Desktop',
     subscription: 'Crypto Exchange • NFT',
   },
   {
@@ -62,6 +69,7 @@ export const brandPageContent = [
     title: 'Binance',
     subtitle: 'Binance Pay overview',
     startValue: '4.1',
+    device: 'Desktop',
     subscription: 'Crypto Exchange • Trading',
   },
   {
@@ -70,6 +78,7 @@ export const brandPageContent = [
     title: 'Binance',
     subtitle: 'Wallet overview',
     startValue: '4.1',
+    device: 'Desktop',
     subscription: 'Crypto Exchange • Crypto Wallet',
   },
   {
@@ -78,6 +87,7 @@ export const brandPageContent = [
     title: 'Binance',
     subtitle: 'Earn overview',
     startValue: '4.2',
+    device: 'Mobile',
     subscription: 'Crypto Exchange',
   },
   {
@@ -86,6 +96,7 @@ export const brandPageContent = [
     title: 'Binance',
     subtitle: 'Staking flow',
     startValue: '4.4',
+    device: 'Desktop',
     subscription: 'Crypto Exchange',
   },
   {
@@ -94,6 +105,7 @@ export const brandPageContent = [
     title: 'Binance',
     subtitle: 'Mining pool overview',
     startValue: '4.1',
+    device: 'Desktop',
     subscription: 'Crypto Exchange',
   },
   {
@@ -102,6 +114,7 @@ export const brandPageContent = [
     title: 'Binance',
     subtitle: 'Referral overview',
     startValue: '4.1',
+    device: 'Desktop',
     subscription: 'Crypto Exchange • Referral',
   },
   {
@@ -110,6 +123,7 @@ export const brandPageContent = [
     title: 'Binance',
     subtitle: 'Cloud mining overview',
     startValue: '4.2',
+    device: 'Desktop',
     subscription: 'Crypto Exchange',
   },
   {
@@ -118,8 +132,7 @@ export const brandPageContent = [
     title: 'Binance',
     subtitle: 'Convert crypto',
     startValue: '4.2',
+    device: 'Mobile',
     subscription: 'Crypto Exchange',
   },
-
-
 ]

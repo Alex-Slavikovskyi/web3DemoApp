@@ -4,7 +4,8 @@ export const flowContent = [
     image: 'images/flowCardsContent/video preview0.png',
     title: 'Binance',
     subtitle: 'P2P Deal',
-    startValue: '4.6 | Desktop',
+    startValue: '4.6',
+    device: 'Desktop',
     subscription: 'Crypto Exchanges • P2P',
   },
   {
@@ -12,7 +13,8 @@ export const flowContent = [
     image: 'images/flowCardsContent/video preview1.png',
     title: 'Binance',
     subtitle: 'Onboarding',
-    startValue: '4.8 | Desktop',
+    startValue: '4.8',
+    device: 'Desktop',
     subscription: 'Crypto Exchanges',
   },
   {
@@ -20,7 +22,8 @@ export const flowContent = [
     image: 'images/flowCardsContent/video_preview9.png',
     title: 'Metamask',
     subtitle: 'Transfer ETH',
-    startValue: '4.4 | Desktop',
+    startValue: '4.4',
+    device: 'Desktop',
     subscription: 'Crypto Wallet',
   },
   {
@@ -28,7 +31,8 @@ export const flowContent = [
     image: 'images/flowCardsContent/video_preview10.png',
     title: 'Kraken',
     subtitle: 'Onboarding',
-    startValue: '4.4 | Desktop',
+    startValue: '4.4',
+    device: 'Desktop',
     subscription: 'Crypto Exchanges',
   },
   {
@@ -36,7 +40,8 @@ export const flowContent = [
     image: 'images/flowCardsContent/video_preview11.png',
     title: 'Binance',
     subtitle: 'Buy crypto',
-    startValue: '4.7 | Desktop',
+    startValue: '4.7',
+    device: 'Desktop',
     subscription: 'Crypto Exchanges • Crypto Wallet',
   },
   {
@@ -44,7 +49,8 @@ export const flowContent = [
     image: 'images/flowCardsContent/video_preview12.png',
     title: 'Binance',
     subtitle: 'Buy crypto',
-    startValue: '4.7 | Desktop',
+    startValue: '4.7',
+    device: 'Desktop',
     subscription: 'Crypto Exchanges • Crypto Wallet',
   },
   {
@@ -52,7 +58,8 @@ export const flowContent = [
     image: 'images/flowCardsContent/video_preview13.png',
     title: 'Metamask',
     subtitle: 'Create account',
-    startValue: '4.2 | Desktop',
+    startValue: '4.2',
+    device: 'Desktop',
     subscription: 'Crypto Wallet',
   },
   {
@@ -60,7 +67,8 @@ export const flowContent = [
     image: 'images/flowCardsContent/video_preview14.png',
     title: 'OpenSea',
     subtitle: 'Listing NFT',
-    startValue: '3 | Desktop',
+    startValue: '3',
+    device: 'Desktop',
     subscription: 'Marketplace • NFT',
   },
   {
@@ -68,7 +76,8 @@ export const flowContent = [
     image: 'images/flowCardsContent/video_preview15.png',
     title: 'OpenSea',
     subtitle: 'Connect wallet',
-    startValue: '4.1 | Desktop',
+    startValue: '4.1',
+    device: 'Desktop',
     subscription: 'Marketplace • NFT • Connecting Third Parties',
   },
   {
@@ -76,7 +85,8 @@ export const flowContent = [
     image: 'images/flowCardsContent/video preview7.png',
     title: 'Coinbase',
     subtitle: 'Onboarding',
-    startValue: '4.7 | Desktop',
+    startValue: '4.7',
+    device: 'Desktop',
     subscription: 'Crypto Exchanges',
   },
 ];

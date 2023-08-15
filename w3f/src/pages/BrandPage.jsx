@@ -33,6 +33,7 @@ export const BrandPage = ({
               title={card.title}
               subtitle={card.subtitle}
               startValue={card.startValue}
+              device={card.device}
               image={card.image}
               subscription={card.subscription}
               card={card}

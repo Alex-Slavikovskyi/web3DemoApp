@@ -101,6 +101,7 @@ export const Slider = ({ titleSlider, flowContent, brandContent, insightsContent
                 title={card.title}
                 subtitle={card.subtitle}
                 startValue={card.startValue}
+                device={card.device}
                 image={card.image}
                 subscription={card.subscription}
               />
@@ -124,6 +125,7 @@ export const Slider = ({ titleSlider, flowContent, brandContent, insightsContent
                 title={card.title}
                 subtitle={card.subtitle}
                 startValue={card.startValue}
+                device={card.device}
                 image={card.image}
                 subscription={card.subscription}
               />
