@@ -4,7 +4,15 @@ import RatingCard from '../components/RatingCard';
 
 function RatingPage() {
   return (
-    <Box sx={{ maxWidth: '967px', margin: '0 auto', pt: '30px', pb: '30px' }}>
+    <Box
+      sx={{
+        maxWidth: '967px',
+        margin: '0 auto',
+        pt: '30px',
+        pb: '30px',
+        mb: '170px',
+      }}
+    >
       <Box sx={{ mb: '30px' }}>
         <Typography
           variant="h2"
@@ -17,7 +25,14 @@ function RatingPage() {
         >
           Scoring logic
         </Typography>
-        <Box sx={{ color: '#b9babc', fontSize: '18px' }}>
+        <Box
+          sx={{
+            color: '#b9babc',
+            fontSize: '18px',
+            fontWeight: '400',
+            mb: '55px',
+          }}
+        >
           <Typography variant="h6" sx={{ mb: '30px', lineHeight: '30px' }}>
             Below you’ll find the web3flows ratings breakdown for utility,
             usability, and visual design. These ratings are applied by our team

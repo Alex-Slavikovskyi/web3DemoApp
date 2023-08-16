@@ -12,18 +12,18 @@ function Layout() {
   return (
     <CssBaseline>
       <Heder />
-      <Box sx={{ width: '1440px', margin: '0 auto' }}>
-        <Box
-          sx={{
-            minHeight: '100vh',
-            width: '1320px',
-            margin: '0 auto',
-          }}
-        >
-          <Outlet />
-          {location.pathname !== '/' && <Footer />}
-        </Box>
+      {/* <Box sx={{ width: '1440px', margin: '0 auto' }}> */}
+      <Box
+        sx={{
+          minHeight: '100vh',
+          // width: '1320px',
+          margin: '0 auto',
+        }}
+      >
+        <Outlet />
+        {location.pathname !== '/' && <Footer />}
       </Box>
+      {/* </Box> */}
     </CssBaseline>
   );
 }

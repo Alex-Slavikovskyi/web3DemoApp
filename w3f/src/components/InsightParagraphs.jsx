@@ -4,7 +4,10 @@ import { Box, Typography } from '@mui/material';
 function InsightParagraphs() {
   return (
     <>
-      <Typography variant="h6" sx={{ mt: '30px', mb: '30px' }}>
+      <Typography
+        variant="h6"
+        sx={{ mt: '30px', mb: '30px', fontWeight: '400' }}
+      >
         Buying cryptocurrency is an important initial step for users entering
         the web3 world. This process often evokes strong emotions, making it
         crucial to offer comprehensive support and ensure a simple, hassle-free
@@ -12,7 +15,7 @@ function InsightParagraphs() {
         methods—replenishing your crypto wallet using a card—and provide
         guidance to simplify the journey.
       </Typography>
-      <Typography variant="h6" sx={{ mb: '30px' }}>
+      <Typography variant="h6" sx={{ mb: '30px', fontWeight: '400' }}>
         Understanding Funding Options:
         <br /> When it comes to funding your crypto wallet, there are several
         methods available, such as P2P transactions, ATMs, or cash. In this
@@ -21,7 +24,7 @@ function InsightParagraphs() {
         can provide users with a convenient and familiar way to fund their
         wallets.
       </Typography>
-      <Typography variant="h6" sx={{ mb: '30px' }}>
+      <Typography variant="h6" sx={{ mb: '30px', fontWeight: '400' }}>
         Addressing User Concerns:
         <br /> At this stage, users often worry about the security and
         accessibility of their funds. Ideally, your platform should offer an
@@ -33,7 +36,7 @@ function InsightParagraphs() {
         takes more than a couple of minutes, inform users upfront to alleviate
         any concerns and reduce the need for customer support assistance.
       </Typography>
-      <Typography variant="h6" sx={{ mb: '30px' }}>
+      <Typography variant="h6" sx={{ mb: '30px', fontWeight: '400' }}>
         Transparent Fee Structure:
         <br /> Ensuring users have a clear understanding of the fees involved is
         crucial. Communicate the fee structure transparently within your
@@ -41,14 +44,14 @@ function InsightParagraphs() {
         empowers users to make informed decisions and fosters trust in your
         service.
       </Typography>
-      <Typography variant="h6" sx={{ mb: '30px' }}>
+      <Typography variant="h6" sx={{ mb: '30px', fontWeight: '400' }}>
         Building Trust and Long-Term Relationships:
         <br /> If your platform has any withdrawal or payment restrictions
         following account replenishment, it is vital to inform users about these
         restrictions beforehand. Honesty about these limitations helps establish
         trust and fosters long-term relationships with your users.
       </Typography>
-      <Typography variant="h6" sx={{ mb: '30px' }}>
+      <Typography variant="h6" sx={{ mb: '30px', fontWeight: '400' }}>
         Exemplary Account Replenishment Experiences: <br /> Let's explore a few
         notable platforms that excel in facilitating account replenishment
       </Typography>

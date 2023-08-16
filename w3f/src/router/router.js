@@ -1,11 +1,11 @@
 import { createBrowserRouter } from 'react-router-dom';
-import { App } from '../App.js'
+import { App } from '../App.js';
 import { HomePage } from '../pages/HomePage.jsx';
 import { BrandPage } from '../pages/BrandPage.jsx';
 import RatingPage from '../pages/RatingPage.jsx';
 import { VideoPage } from '../pages/VideoPage.jsx';
 import { CateforyPage } from '../pages/CateforyPage.jsx';
-
+import Insight from '../pages/Insight.jsx';
 
 export const router = createBrowserRouter([
   {
@@ -28,11 +28,15 @@ export const router = createBrowserRouter([
       },
       {
         path: '/video',
-        element: <VideoPage />
+        element: <VideoPage />,
       },
       {
         path: '/catefory',
-        element: <CateforyPage/>,
+        element: <CateforyPage />,
+      },
+      {
+        path: '/insight',
+        element: <Insight />,
       },
     ],
   },
