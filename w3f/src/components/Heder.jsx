@@ -1,6 +1,8 @@
 import { Avatar, Box } from '@mui/material';
 import React from 'react';
 import { SearchField } from './InputField';
+import { NavLink } from 'react-router-dom';
+import Container from './Container';
 
 function Heder() {
   return (
@@ -11,56 +13,62 @@ function Heder() {
         position: 'sticky',
         top: '0',
         width: '100%',
-        height: '60px',
         borderBottom: '1px solid #2D3943',
       }}
     >
-      <Box
-        sx={{
-          height: '100%',
-          width: '1320px',
-          margin: '0 auto',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-        }}
-      >
+      <Container>
         <Box
           sx={{
-            '&:hover': {
-              cursor: 'pointer',
-            },
-          }}
-        >
-          <img src="images/heder/W3F.png" alt="W3F" />
-        </Box>
-        <SearchField />
-        <Box
-          sx={{
+            height: '60px',
+            margin: '0 auto',
             display: 'flex',
-            justifyContent: 'center',
+            justifyContent: 'space-between',
             alignItems: 'center',
-            gap: '5px',
-            '&:hover': {
-              cursor: 'pointer',
-            },
           }}
         >
-          <Avatar src="images/heder/avatar.svg" />
+          <NavLink to="/">
+            <Box
+              sx={{
+                '&:hover': {
+                  cursor: 'pointer',
+                },
+              }}
+            >
+              <img
+                src="images/heder/W3F.svg"
+                style={{ height: '29px', width: '48px' }}
+                alt="W3F"
+              />
+            </Box>
+          </NavLink>
+          <SearchField />
           <Box
             sx={{
-              h: '24px',
-              w: '24px',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              gap: '5px',
+              '&:hover': {
+                cursor: 'pointer',
+              },
             }}
           >
-            <img
-              src="images/heder/arrowDown.svg"
-              alt="logo user"
-              style={{ width: '24px', height: '24px', marginTop: '10px' }}
-            />
+            <Avatar src="images/heder/avatar.svg" />
+            <Box
+              sx={{
+                h: '24px',
+                w: '24px',
+              }}
+            >
+              <img
+                src="images/heder/arrowDown.svg"
+                alt="logo user"
+                style={{ width: '24px', height: '24px', marginTop: '10px' }}
+              />
+            </Box>
           </Box>
         </Box>
-      </Box>
+      </Container>
     </Box>
   );
 }
