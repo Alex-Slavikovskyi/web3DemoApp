@@ -3,19 +3,19 @@ import ReactPlayer from 'react-player';
 import { Box, Typography } from '@mui/material';
 import { ScreenshotVideoContent } from '../data/ScreenshotVideoContent';
 import { MIniSliderScreenshots } from '../components/Slider/MIniSliderScreenshots';
-import StarIcon from '@mui/icons-material/Star';
 import { MenuVideo } from '../components/MenuVideo';
 import { previewVideoContent } from '../data/previewVideoContent';
 import { DescriptionVideo } from '../components/DescriptionVideo';
 import { previewSuggestedJourneys } from '../data/previewVideoContent';
 import { previewMoreBrand } from '../data/previewVideoContent';
+import Container from '../components/Container';
 
 export const VideoPage = () => {
   const [currentVideo, setCurrentVideo] = useState(previewVideoContent[0]);
 
 
   return (
-    <Box>
+    <Container>
       <Box sx={{ paddingTop: '16px' }}>
         <Typography sx={{ color: '#55E5C5', fontWeight: 600, fontSize: '18px', lineHeight: '22px' }}
         >
@@ -30,10 +30,7 @@ export const VideoPage = () => {
         </Typography>
       </Box>
 
-      {/* body VideoPage */}
-      {/* <Box
-        sx={{ display: 'flex', justifyContent: 'space-between', gap: '22px', paddingTop: '28px' }}
-      > */}
+
       <Box>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', gap: '22px', padding: '28px 0 24px 0', }}>
           <Box sx={{ height: '700px'}}>
@@ -62,9 +59,7 @@ export const VideoPage = () => {
         <DescriptionVideo />
       </Box>
 
-
-
-      {/* </Box> */}
-    </Box>
+      
+      </Container>
   );
 };

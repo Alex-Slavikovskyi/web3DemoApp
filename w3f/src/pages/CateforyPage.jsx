@@ -4,6 +4,7 @@ import { FilterCategory } from '../components/FilterCategory';
 import CardFlow from '../UI/CardFlow';
 import { CateforyPageContent } from '../data/CateforyPageContent';
 import { filterCheckboxContent } from '../data/filterCheckboxContent';
+import Container from '../components/Container';
 
 
 export const CateforyPage = () => {
@@ -41,6 +42,7 @@ export const CateforyPage = () => {
   };
 
   return (
+    <Container>
     <Box sx={{
       paddingTop: '24px',
     }}>
@@ -105,5 +107,6 @@ export const CateforyPage = () => {
         </Box>
       </Box>
     </Box>
+    </Container>
   )
 }
