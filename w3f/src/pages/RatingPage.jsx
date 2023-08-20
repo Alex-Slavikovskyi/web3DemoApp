@@ -1,6 +1,10 @@
 import { Box, Typography } from '@mui/material';
 import React from 'react';
-import RatingCard from '../components/RatingCard';
+import { ratingPageUtility } from '../data/ratingPageContent';
+import { CategoriesRating } from '../components/CategoriesRating';
+import { ratingPageUsability } from '../data/ratingPageContent';
+import { ratingPageVisualDesign } from '../data/ratingPageContent';
+
 
 function RatingPage() {
   return (
@@ -47,18 +51,29 @@ function RatingPage() {
         </Box>
       </Box>
       <Box sx={{ display: 'flex', gap: '25px' }}>
-        <RatingCard
-          title="Utility"
-          subtitle="How advanced is the feature and is it fit for purpose?"
-        />
-        <RatingCard
-          title="Usability"
-          subtitle="Is the journey easy and fast to complete?"
-        />
-        <RatingCard
-          title="Visual Design"
-          subtitle="Is the design in-line with current trends and consistent across the journey?"
-        />
+        {
+          ratingPageUtility && <CategoriesRating
+            cards={ratingPageUtility.cards}
+            title={ratingPageUtility.title}
+            subTitle={ratingPageUtility.subTitle}
+          />
+        }
+        {
+          ratingPageUsability && <CategoriesRating
+            cards={ratingPageUsability.cards}
+            title={ratingPageUsability.title}
+            subTitle={ratingPageUsability.subTitle}
+          />
+        }
+        {
+          ratingPageVisualDesign && <CategoriesRating
+            cards={ratingPageVisualDesign.cards}
+            title={ratingPageVisualDesign.title}
+            subTitle={ratingPageVisualDesign.subTitle}
+          />
+        }
+
+
       </Box>
     </Box>
   );

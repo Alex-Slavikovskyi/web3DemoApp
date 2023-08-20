@@ -28,6 +28,7 @@ export function Footer() {
           sx={{
             '&:hover': {
               cursor: 'pointer',
+              textDecoration: 'underline'
             },
           }}
         >
@@ -38,6 +39,7 @@ export function Footer() {
           sx={{
             '&:hover': {
               cursor: 'pointer',
+              textDecoration: 'underline'
             },
           }}
         >
@@ -48,6 +50,7 @@ export function Footer() {
           sx={{
             '&:hover': {
               cursor: 'pointer',
+              textDecoration: 'underline'
             },
           }}
         >
@@ -58,6 +61,7 @@ export function Footer() {
           sx={{
             '&:hover': {
               cursor: 'pointer',
+              textDecoration: 'underline'
             },
           }}
         >
@@ -69,6 +73,7 @@ export function Footer() {
         sx={{
           '&:hover': {
             cursor: 'pointer',
+            textDecoration: 'underline'
           },
         }}
       >
