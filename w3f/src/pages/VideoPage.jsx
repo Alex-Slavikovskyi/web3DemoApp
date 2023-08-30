@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ReactPlayer from 'react-player';
 import { Box, Typography } from '@mui/material';
 import { ScreenshotVideoContent } from '../data/ScreenshotVideoContent';
 import { MIniSliderScreenshots } from '../components/Slider/MIniSliderScreenshots';
@@ -9,6 +8,7 @@ import { DescriptionVideo } from '../components/DescriptionVideo';
 import { previewSuggestedJourneys } from '../data/previewVideoContent';
 import { previewMoreBrand } from '../data/previewVideoContent';
 import Container from '../components/Container';
+import ReactPlayable from 'react-playable';
 
 export const VideoPage = () => {
   const [currentVideo, setCurrentVideo] = useState(previewVideoContent[0]);
@@ -33,10 +33,10 @@ export const VideoPage = () => {
 
       <Box>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', gap: '22px', padding: '28px 0 24px 0', }}>
-          <Box sx={{ height: '700px'}}>
-            <ReactPlayer width="856px" height="476px" controls
-              url={currentVideo.urlVideo}
-              style={{ backgroundColor: 'rgb(11,13,14)' }}
+          <Box sx={{ height: '700px' }}>
+            <ReactPlayable width={856} height={476}
+              src={currentVideo.urlVideo}
+              poster="../video/posterVideo.png"
             />
             <Box
               sx={{ marginTop: '24px', padding: '20px 24px 0 24px', backgroundColor: '#202932', maxWidth: '856px', }}
@@ -49,17 +49,17 @@ export const VideoPage = () => {
           </Box>
 
           {/* right section Video menu */}
-          <MenuVideo 
-          setCurrentVideo={setCurrentVideo} 
-          previewSuggestedJourneys={previewSuggestedJourneys}
-          previewMoreBrand={previewMoreBrand}
+          <MenuVideo
+            setCurrentVideo={setCurrentVideo}
+            previewSuggestedJourneys={previewSuggestedJourneys}
+            previewMoreBrand={previewMoreBrand}
           />
         </Box>
 
         <DescriptionVideo />
       </Box>
 
-      
-      </Container>
+
+    </Container>
   );
 };

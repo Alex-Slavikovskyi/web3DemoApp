@@ -1,8 +1,10 @@
 import { Box, Typography } from '@mui/material';
 import React from 'react';
+import Container from './Container';
 
 export function Footer() {
   return (
+    <Container>
     <Box
       sx={{
         borderTop: '1px solid #2D3943',
@@ -80,6 +82,7 @@ export function Footer() {
         Do you need any help? Contact us help@web3flows.com
       </Typography>
     </Box>
+    </Container>
   );
 }
 
