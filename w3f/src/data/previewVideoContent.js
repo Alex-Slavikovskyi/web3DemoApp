@@ -1,5 +1,6 @@
 export const previewVideoContent = [
   {
+    
     id: 1,
     urlVideo: '../video/Onboarding-ready.mp4',
     prevImg: '../images/video-preview/video_preview-(1).png',

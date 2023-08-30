@@ -13,7 +13,6 @@ import ReactPlayable from 'react-playable';
 export const VideoPage = () => {
   const [currentVideo, setCurrentVideo] = useState(previewVideoContent[0]);
 
-
   return (
     <Container>
       <Box sx={{ paddingTop: '16px' }}>
@@ -29,7 +28,6 @@ export const VideoPage = () => {
           Desktop
         </Typography>
       </Box>
-
 
       <Box>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', gap: '22px', padding: '28px 0 24px 0', }}>
@@ -55,11 +53,8 @@ export const VideoPage = () => {
             previewMoreBrand={previewMoreBrand}
           />
         </Box>
-
         <DescriptionVideo />
       </Box>
-
-
     </Container>
   );
 };
