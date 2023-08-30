@@ -1,7 +1,7 @@
 export const previewVideoContent = [
   {
     id: 1,
-    urlVideo: '../video/Onboarding-ready.mov',
+    urlVideo: '../video/Onboarding-ready.mp4',
     prevImg: '../images/video-preview/video_preview-(1).png',
     title: 'Metamask',
     subTitle: 'Depositing Funds',
@@ -9,7 +9,7 @@ export const previewVideoContent = [
   },
   {
     id: 2,
-    urlVideo: '../video/Onboarding-ready.mov',
+    urlVideo: '../video/Onboarding-ready.mp4',
     prevImg: '../images/video-preview/video-preview.png',
     title: 'Metamask',
     subTitle: 'Depositing Funds',
@@ -17,7 +17,7 @@ export const previewVideoContent = [
   },
   {
     id: 3,
-    urlVideo: '../video/Onboarding-ready.mov',
+    urlVideo: '../video/Onboarding-ready.mp4',
     prevImg: '../images/video-preview/video-preview.png',
     title: 'Metamask',
     subTitle: 'Depositing Funds',
@@ -25,7 +25,7 @@ export const previewVideoContent = [
   },
   {
     id: 4,
-    urlVideo: '../video/Onboarding-ready.mov',
+    urlVideo: '../video/Onboarding-ready.mp4',
     prevImg: '../images/video-preview/video-preview.png',
     title: 'Metamask',
     subTitle: 'Depositing Funds',
@@ -33,7 +33,7 @@ export const previewVideoContent = [
   },
   {
     id: 5,
-    urlVideo: '../video/Onboarding-ready.mov',
+    urlVideo: '../video/Onboarding-ready.mp4',
     prevImg: '../images/video-preview/video-preview.png',
     title: 'Metamask',
     subTitle: 'Depositing Funds',
@@ -41,7 +41,7 @@ export const previewVideoContent = [
   },
   {
     id: 6,
-    urlVideo: '../video/Onboarding-ready.mov',
+    urlVideo: '../video/Onboarding-ready.mp4',
     prevImg: '../images/video-preview/video-preview.png',
     title: 'Metamask',
     subTitle: 'Depositing Funds',
@@ -49,7 +49,7 @@ export const previewVideoContent = [
   },
   {
     id: 7,
-    urlVideo: '../video/Onboarding-ready.mov',
+    urlVideo: '../video/Onboarding-ready.mp4',
     prevImg: '../images/video-preview/video-preview.png',
     title: 'Metamask',
     subTitle: 'Depositing Funds',
@@ -57,7 +57,7 @@ export const previewVideoContent = [
   },
   {
     id: 8,
-    urlVideo: '../video/Onboarding-ready.mov',
+    urlVideo: '../video/Onboarding-ready.mp4',
     prevImg: '',
     title: '',
     subTitle: '',

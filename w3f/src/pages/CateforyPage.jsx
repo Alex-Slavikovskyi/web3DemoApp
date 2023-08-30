@@ -76,7 +76,7 @@ export const CateforyPage = () => {
             >
               Filter By category
             </FormLabel>
-            <FilterCategory
+            <FilterCategory 
               filterCheckboxContent={filterCheckboxContent}
               handleCheckboxChange={handleCheckboxChange} 
               />
