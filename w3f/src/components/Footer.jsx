@@ -2,6 +2,8 @@ import { Box, Button, Link, Typography } from '@mui/material';
 import React from 'react';
 import Container from './Container';
 
+
+
 export function Footer() {
   const emailAddress = 'help@web3flows.com';
   const handleEmailClick = () => {
