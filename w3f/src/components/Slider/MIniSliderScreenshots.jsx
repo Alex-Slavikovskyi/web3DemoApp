@@ -214,6 +214,7 @@ export const MIniSliderScreenshots = ({ titleSlider, ScreenshotVideoContent }) =
           </IconButton>
         </div>
       </Dialog> */}
+      
 
 
 
