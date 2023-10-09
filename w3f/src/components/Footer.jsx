@@ -4,6 +4,8 @@ import Container from './Container';
 
 
 
+
+
 export function Footer() {
   const emailAddress = 'help@web3flows.com';
   const handleEmailClick = () => {
