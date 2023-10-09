@@ -19,7 +19,7 @@ register();
 const SwiperStyled = styled(Swiper)((props) => {
   return ({
     "& .swiper-button-prev": {
-      top: 30,
+      top: 16,
       left: '94.5%',
       '&::after': {
         content: `''`,
@@ -40,7 +40,7 @@ const SwiperStyled = styled(Swiper)((props) => {
     },
 
     "& .swiper-button-next": {
-      top: 30,
+      top:16,
       
       '&::after': {
         content: `''`,

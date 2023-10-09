@@ -9,6 +9,7 @@ import React from 'react';
 
 
 export const InsightsCard = ({ name, data, image }) => {
+  
   return (
     <Card
       sx={{

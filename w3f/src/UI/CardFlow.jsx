@@ -46,6 +46,7 @@ const HoverStyled = styled(CardMedia)((props) => ({
 }));
 
 function CardFlow({ title, subtitle, startValue, device, image, subscription, h }) {
+  
   return (
     <Card
       sx={{

@@ -6,7 +6,7 @@ export const DescriptionVideo = () => {
   return (
     <Box
       sx={{
-        marginTop: '24px',
+
         padding: '24px',
         backgroundColor: '#202932',
         maxWidth: '856px',

@@ -1,8 +1,10 @@
-import { Box, Button, CardMedia, Typography, styled } from '@mui/material'
-import React from 'react'
+import { AppBar, Box, Button, CardMedia, Dialog, IconButton, Toolbar, Typography, styled } from '@mui/material'
+import React, { useState } from 'react'
 import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
 import { saveAs } from 'file-saver';
-
+import CloseIcon from '@mui/icons-material/Close';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 // style for slider
 import { Navigation, Pagination, Scrollbar, A11y, EffectCards } from 'swiper/modules';
@@ -32,7 +34,8 @@ const ButtonStyled = styled(Button)((props) => ({
 
 
 const SwiperStyled = styled(Swiper)((props) => ({
-  zIndex: 9999,
+  zIndex: 1,
+
   "& .swiper-button-prev": {
     top: 64,
     left: 40,
@@ -91,11 +94,10 @@ const SwiperStyled = styled(Swiper)((props) => ({
 
 export const MIniSliderScreenshots = ({ titleSlider, ScreenshotVideoContent }) => {
 
-
   const handleDownloadClick = () => {
     // Путь к вашему архиву с файлами
     const zipFilePath = '../save/binance-onboarding.zip';
-    
+
     // Загрузка архива с использованием библиотеки FileSaver.js
     fetch(zipFilePath)
       .then(response => response.blob())
@@ -107,8 +109,23 @@ export const MIniSliderScreenshots = ({ titleSlider, ScreenshotVideoContent }) =
       });
   };
 
+
+  //---------------------------------------------
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(1);
+
+  const handleSlideClick = (index) => {
+    setActiveIndex(index);
+    setIsOpen(true);
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
+
   return (
-    <Box sx={{height: '180px'}}>
+    <Box sx={{ height: '180px' }}>
       <SwiperStyled
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y, EffectCards]}
@@ -118,7 +135,8 @@ export const MIniSliderScreenshots = ({ titleSlider, ScreenshotVideoContent }) =
         speed={500}
         navigation
         spaceBetween={10}
-        grabCursor
+      // grabCursor
+      // pagination
       // onSwiper={(swiper) => console.log(swiper)}
       // onSlideChange={() => console.log('slide change')}
       >
@@ -133,7 +151,7 @@ export const MIniSliderScreenshots = ({ titleSlider, ScreenshotVideoContent }) =
             {ScreenshotVideoContent && `${titleSlider} (${ScreenshotVideoContent.length})`}
           </Typography>
           <ButtonStyled startIcon={<FileDownloadOutlinedIcon />}
-          onClick={handleDownloadClick}
+            onClick={handleDownloadClick}
           >
             Download all
           </ButtonStyled>
@@ -145,16 +163,86 @@ export const MIniSliderScreenshots = ({ titleSlider, ScreenshotVideoContent }) =
               <CardMedia
                 component="img"
                 alt="brand_logo"
+                onClick={() => handleSlideClick(card.id)}
                 image={card.image}
                 sx={{
                   width: '134px',
                   height: '84px',
+                  cursor: 'pointer',
                 }}
               />
             </SwiperSlide>
           ))
         }
       </SwiperStyled>
+
+
+
+      <Dialog  maxWidth='md' open={isOpen} onClose={handleClose} sx={{
+        backgroundColor: '#202932', zIndex: 2,
+      }}>
+        <div style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <IconButton color="inherit" onClick={() => setActiveIndex(activeIndex - 1)} disabled={activeIndex === 0} style={{ position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)' }}>
+            <ArrowBackIosNewIcon />
+          </IconButton>
+          <img
+            src={ScreenshotVideoContent[activeIndex].image}
+            alt={`Slide ${ScreenshotVideoContent[activeIndex].id}`}
+            style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
+          />
+          <IconButton color="inherit" onClick={() => setActiveIndex(activeIndex + 1)} disabled={activeIndex === ScreenshotVideoContent.length - 1} style={{ position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)' }}>
+            <ArrowForwardIosIcon />
+          </IconButton>
+        </div>
+      </Dialog>
+
+
+
+
+      {/* <Dialog open={isOpen} onClose={handleClose} sx={{ backgroundColor: '#202932', zIndex: 2, }}>
+        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', position: 'relative', height: '100%' }}>
+          <IconButton color="inherit" onClick={() => setActiveIndex(activeIndex - 1)} disabled={activeIndex === 0} sx={{ position: 'absolute', left: 0 }}>
+            <ArrowBackIosNewIcon />
+          </IconButton>
+          <img
+            src={ScreenshotVideoContent[activeIndex].image}
+            alt={`Slide ${ScreenshotVideoContent[activeIndex].id}`}
+            style={{ width: '100vw', height: '100%', objectFit: 'contain' }}
+          />
+          <IconButton color="inherit" onClick={() => setActiveIndex(activeIndex + 1)} disabled={activeIndex === ScreenshotVideoContent.length - 1} style={{ position: 'absolute', right: 0 }}>
+            <ArrowForwardIosIcon />
+          </IconButton>
+        </div>
+      </Dialog> */}
+
+
+
+
+      {/* <Dialog open={isOpen} onClose={handleClose}
+        sx={{
+          backgroundColor: '#202932',
+          zIndex: 2,
+
+        }}
+      >
+        <AppBar position="static">
+          <Toolbar
+            sx={{
+              backgroundColor: '#19232C',
+            }}>
+            <IconButton edge="start" color="inherit" onClick={handleClose} aria-label="close">
+              <CloseIcon />
+            </IconButton>
+          </Toolbar>
+        </AppBar>
+        <img
+          src={ScreenshotVideoContent[activeIndex].image}
+          alt={`Slide ${ScreenshotVideoContent[activeIndex].id}`}
+          style={{ width: '100vw', height: '100%', objectFit: 'contain', }}
+        />
+      </Dialog> */}
+
+
     </Box>
   )
 }

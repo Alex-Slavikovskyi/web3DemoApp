@@ -37,7 +37,7 @@ export const VideoPage = () => {
               poster="../video/posterVideo.png"
             />
             <Box
-              sx={{ marginTop: '24px', padding: '20px 24px 0 24px', backgroundColor: '#202932', maxWidth: '856px', }}
+              sx={{ marginTop: '24px', padding: '20px 24px 0 24px', backgroundColor: '#202932', maxWidth: '856px' }}
             >
               <MIniSliderScreenshots
                 titleSlider="Screenshots "
