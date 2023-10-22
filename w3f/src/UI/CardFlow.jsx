@@ -28,7 +28,6 @@ const HoverStyled = styled(CardMedia)((props) => ({
       width: '28px',
       height: '28px',
       backgroundImage: `url('images/flowCardsContent/playbutton.svg')`,
-
       backgroundSize: 'cover',
       backgroundPosition: 'center',
     },

@@ -4,12 +4,22 @@ import {
   CardMedia,
   Typography,
 } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 
 
 
 export const InsightsCard = ({ name, data, image }) => {
-  
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+
   return (
     <Card
       sx={{
@@ -18,10 +28,17 @@ export const InsightsCard = ({ name, data, image }) => {
         backgroundColor: '#202932',
         '& .MuiCardContent-root': {
           padding: '8px 16px 36px 16px',
-        } 
+        },
       }}
     >
-      <CardMedia image={image} title="green iguana" sx={{ height: '134px', }} />
+      <CardMedia image={image} title="green iguana" component="img" sx={{
+        height: '134px',
+        opacity: isHovered ? '0.5' : '1',
+        cursor: 'pointer',
+      }}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      />
       <CardContent>
         <Typography
           gutterBottom
@@ -31,12 +48,12 @@ export const InsightsCard = ({ name, data, image }) => {
             fontSize: '14px',
             lineHeight: '20px',
             transition: 'all 0.3s ease',
-            // '&:hover': {
-            //   textDecoration: 'underline',
-            //   cursor: 'pointer',
-            // },
+            cursor: 'pointer',
+            textDecoration: isHovered ? 'underline' : 'none',
+            transition: 'opacity 0.3s ease',
           }}
-          component="div"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
           {name}
         </Typography>
@@ -50,15 +67,12 @@ export const InsightsCard = ({ name, data, image }) => {
             lineHeight: '15px',
             padding: '8px 0 0 0',
             transition: 'all 0.3s ease',
-            // '&:hover': {
-            //   textDecoration: 'underline',
-            //   cursor: 'pointer',
-            // },
           }}
           component="div"
         >
           {data}
         </Typography>
+
       </CardContent>
     </Card>
   )
